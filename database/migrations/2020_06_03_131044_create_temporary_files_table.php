@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateTemporaryFilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('records', function (Blueprint $table) {
-            $table->string('qualification_grade')->nullable();
+        Schema::create('temporary_files', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('token');
+            $table->string('collection')->default('default');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('records', function (Blueprint $table) {
-
-        });
+        Schema::dropIfExists('temporary_files');
     }
-};
+}

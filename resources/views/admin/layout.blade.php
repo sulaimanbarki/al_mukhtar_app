@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{env('APP_NAME')}}</title>
+    <title>{{ env('APP_NAME') }}</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -52,7 +52,8 @@
 
                 {{-- logout button --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a class="nav-link" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
@@ -73,91 +74,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
-            <!-- Brand Logo -->
-            <a href="{{ route('dashboard') }}" class="brand-link">
-                <span class="brand-text font-weight-light">{{ env('APP_NAME') }}</span>
-            </a>
-
-            <!-- Sidebar -->
-            <div class="sidebar">
-                <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-                    <div class="info">
-                        <a href="#" class="d-block">{{ Auth::user()->name  }}</a>
-                    </div>
-                </div>
-
-
-                <!-- Sidebar Menu -->
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-                        <li class="nav-item">
-                            <a href="/dashboard"
-                                class="nav-link
-                            @if (Request::is('dashboard')) active @endif
-                            ">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Dashboard
-                                    {{-- <i class="right fas fa-angle-left"></i> --}}
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/users"
-                                class="nav-link
-                            @if (Request::is('users')) active @endif
-                            ">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    Users
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/records"
-                                class="nav-link
-                            @if (Request::is('records')) active @endif
-                            ">
-                                <i class="nav-icon fas fa-chart-pie"></i>
-                                <p>
-                                    Records
-                                </p>
-                            </a>
-                        </li>
-                        {{-- characters --}}
-                        <li class="nav-item">
-                            <a href="/certificates"
-                                class="nav-link
-                            @if (Request::is('certificates')) active @endif
-                            ">
-                                <i class="nav-icon fas fa-user"></i>
-                                <p>
-                                    Certificates
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/backupdb"
-                                class="nav-link
-                            @if (Request::is('backupdb')) active @endif
-                            ">
-                                <i class="nav-icon fas fa-database"></i>
-                                <p>
-                                    Backup
-                                </p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- /.sidebar-menu -->
-            </div>
-            <!-- /.sidebar -->
-        </aside>
+        @include('admin.components.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -240,6 +157,16 @@
     {{-- <script src="{{ asset('adminlte/dist/js/demo.js') }}"></script> --}}
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('adminlte/dist/js/pages/dashboard.js') }}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/laravel-file-uploader"></script>
+    <script>
+        new Vue({
+            el: '#app'
+        })
+    </script>
+
+    @stack('scripts')
 </body>
 
 </html>

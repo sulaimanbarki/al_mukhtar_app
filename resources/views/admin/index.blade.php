@@ -18,14 +18,14 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        <h3>{{ $total_records }}</h3>
+                        {{-- <h3>{{ $total_records }}</h3> --}}
 
                         <p>Total Records</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="{{ route('records.index') }}" class="small-box-footer">More records <i class="fas fa-arrow-circle-right"></i></a>
+                    {{-- <a href="{{ route('records.index') }}" class="small-box-footer">More records <i class="fas fa-arrow-circle-right"></i></a> --}}
                 </div>
             </div>
             <!-- ./col -->
@@ -33,14 +33,14 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        <h3>{{ $total_certificates }}</h3>
+                        {{-- <h3>{{ $total_certificates }}</h3> --}}
 
                         <p>Total Certificates</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="{{ route('certificates.index') }}" class="small-box-footer">More certificates <i class="fas fa-arrow-circle-right"></i></a>
+                    {{-- <a href="{{ route('certificates.index') }}" class="small-box-footer">More certificates <i class="fas fa-arrow-circle-right"></i></a> --}}
                 </div>
             </div>
             <!-- ./col -->

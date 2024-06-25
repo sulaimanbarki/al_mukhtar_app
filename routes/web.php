@@ -2,13 +2,12 @@
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BooksController;
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers\PlansController;
 use App\Http\Controllers\UsersController;
 use Spatie\Backup\Tasks\Backup\BackupJob;
-use App\Http\Controllers\RecordController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CertificatesController;
+use App\Http\Controllers\CategoriesController;
 use Spatie\Backup\BackupDestination\BackupDestinationFactory;
 /*
 |--------------------------------------------------------------------------
@@ -44,14 +43,10 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::resource('users', UsersController::class);
-    Route::resource('plans', PlansController::class);
-    // characters  
-    Route::resource('certificates', CertificatesController::class);
-    Route::resource('records', RecordController::class);
-    Route::get('change-status/{id}', [RecordController::class, 'changeStatus'])->name('change.status');
+    Route::resource('categories', CategoriesController::class);
+    Route::resource('books', BooksController::class);
 });
 
-Route::get('/Validation/Details/{registration_id}', [RecordController::class, 'details'])->name('validation.details');
 
 require __DIR__ . '/auth.php';
 

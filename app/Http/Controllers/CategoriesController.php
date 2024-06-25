@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Certificate;
+use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
-class CertificatesController extends Controller
+class CategoriesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class CertificatesController extends Controller
      */
     public function index()
     {
-        return view('admin.certificates.index', [
-            'certificates' => Certificate::all()
-        ]);
+        return view('admin.categories.index', ['categories' => Category::all()]);
     }
 
     /**
@@ -27,8 +25,7 @@ class CertificatesController extends Controller
      */
     public function create()
     {
-        //
-        return view('admin.certificates.create');
+        return view('admin.categories.create');
     }
 
     /**
@@ -41,15 +38,14 @@ class CertificatesController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'reference' => 'required'
         ]);
 
-        Certificate::create([
-            'name' => $request->name,
-            'reference' => $request->reference
-        ]);
+        $category = new Category();
+        $category->name = $request->name;
+        $category->slug = Str::slug($request->name);
+        $category->save();
 
-        return redirect()->route('certificates.index');
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -71,9 +67,9 @@ class CertificatesController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.certificates.edit', [
-            'certificate' => Certificate::find($id)
-        ]);
+        $category = Category::findOrFail(decrypt($id));
+
+        return view('admin.categories.edit', compact('category'));
     }
 
     /**
@@ -85,18 +81,16 @@ class CertificatesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $certificate = Certificate::findOrFail($id);
-
         $request->validate([
             'name' => 'required',
-            'reference' => ''
         ]);
 
-        $certificate->name = $request->name;
-        $certificate->reference = $request->reference;
-        $certificate->save();
+        $category = Category::findOrFail(decrypt($id));
+        $category->name = $request->name;
+        $category->slug = Str::slug($request->name);
+        $category->update();
 
-        return redirect()->route('certificates.index');
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -107,8 +101,9 @@ class CertificatesController extends Controller
      */
     public function destroy($id)
     {
-        // Character::destroy($id);
-        Certificate::destroy($id);
-        return redirect()->route('certificates.index');
+        $category = Category::findOrFail(decrypt($id));
+        $category->delete();
+
+        return redirect()->route('categories.index');
     }
 }
