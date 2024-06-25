@@ -8,6 +8,7 @@ use App\Http\Controllers\UsersController;
 use Spatie\Backup\Tasks\Backup\BackupJob;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CategoriesController;
+use App\Http\Controllers\MultimediaController;
 use Spatie\Backup\BackupDestination\BackupDestinationFactory;
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('users', UsersController::class);
     Route::resource('categories', CategoriesController::class);
     Route::resource('books', BooksController::class);
+    Route::resource('multimedia', MultimediaController::class);
 });
 
 

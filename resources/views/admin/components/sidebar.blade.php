@@ -66,6 +66,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/multimedia"
+                        class="nav-link
+                  @if (Request::is('multimedia')) active @endif
+                  ">
+                        <i class="nav-icon fas fa-photo-video"></i>
+                        <p>
+                            Multimedia
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/backupdb"
                         class="nav-link
                   @if (Request::is('backupdb')) active @endif

@@ -3,13 +3,13 @@
 
 <div class="row mb-2">
     <div class="col-sm-6">
-        <h1 class="m-0">Users</h1>
+        <h1 class="m-0">Authors</h1>
     </div><!-- /.col -->
     <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="/admin">Home</a></li>
-            <li class="breadcrumb-item"><a href="/admin/users">Users</a></li>
-            <li class="breadcrumb-item active">Edit User</li>
+            <li class="breadcrumb-item"><a href="/admin/users">Authors</a></li>
+            <li class="breadcrumb-item active">Edit Author</li>
         </ol>
     </div><!-- /.col -->
 </div><!-- /.row -->
@@ -19,13 +19,13 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Edit User</h3>
+                        <h3 class="card-title">Edit Author</h3>
                         {{-- Edit user button float right --}}
                         <a href="{{ route('users.index') }}" class="btn btn-primary btn-sm float-right">Back</a>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body p-0">
-                        <form action="{{ route('users.update', $user->id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('users.update', encrypt($user->id)) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="card-body">

@@ -16,7 +16,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index', ['users' => User::all()]);
+        return view('admin.users.index', ['users' => User::where('is_admin', 0)->get()]);
     }
 
     /**
@@ -74,7 +74,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        $user = User::findOrFail($id);
+        $user = User::findOrFail(decrypt($id));
 
         return view('admin.users.edit', compact('user'));
     }
@@ -88,17 +88,19 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $decrypted_id = decrypt($id);
         $request->validate([
             'name' => 'required',
-            'email' => "required|unique:users,email,$id,id",
-            'password' => 'required',
-            'password_confirm' => 'required|same:password',
+            'email' => "required|unique:users,email,$decrypted_id,id",
+            // password is required only if it is filled
+            'password' => 'nullable',
+            'password_confirm' => 'nullable|same:password',
         ]);
 
-        $user = User::findorfail($id);
+        $user = User::findorfail(decrypt($id));
         $user->name = request()->name;
         $user->email = request()->email;
-        $user->password = Hash::make($request->password);
+        $user->password = $request->password ? Hash::make($request->password) : $user->password;
         $user->update();
 
         return redirect()->route('users.index');
@@ -112,7 +114,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::findorfail($id);
+        $user = User::findorfail(decrypt($id));
 
         if ($user->is_admin) {
             return redirect()->route('users.index');
