@@ -29,9 +29,11 @@ class SettingsController extends Controller
 
         $logoPath = null;
         if ($request->hasFile('logo')) {
-            $logoPath = $request->file('logo')->store('logos', 'public');
-            $logoPath = 'storage/' . $logoPath;
-            $logoPath = env('APP_URL') . '/' . $logoPath;
+            $file = $request->file('logo');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $filePath = 'logos/' . $fileName;
+            $file->move(public_path('logos'), $fileName);
+            $logoPath = env('APP_URL') . '/' . $filePath;
         }
 
         Setting::create([
@@ -40,9 +42,9 @@ class SettingsController extends Controller
             'logo_path' => $logoPath,
         ]);
 
-
         return redirect()->route('settings.index')->with('success', 'Setting created successfully.');
     }
+
 
     public function edit($id)
     {
@@ -61,12 +63,20 @@ class SettingsController extends Controller
 
         $logoPath = $setting->logo_path;
         if ($request->hasFile('logo')) {
+            // Delete the old logo if it exists
             if ($logoPath) {
-                Storage::disk('public')->delete($logoPath);
+                $oldLogoPath = public_path(str_replace(env('APP_URL') . '/', '', $logoPath));
+                if (file_exists($oldLogoPath)) {
+                    unlink($oldLogoPath);
+                }
             }
-            $logoPath = $request->file('logo')->store('logos', 'public');
-            $logoPath = 'storage/' . $logoPath;
-            $logoPath = env('APP_URL') . '/' . $logoPath;
+
+            // Store the new logo
+            $file = $request->file('logo');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $filePath = 'logos/' . $fileName;
+            $file->move(public_path('logos'), $fileName);
+            $logoPath = env('APP_URL') . '/' . $filePath;
         }
 
         $setting->update([
@@ -77,6 +87,7 @@ class SettingsController extends Controller
 
         return redirect()->route('settings.index')->with('success', 'Setting updated successfully.');
     }
+
 
     public function destroy($id)
     {
