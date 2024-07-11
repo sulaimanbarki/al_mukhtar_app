@@ -7,6 +7,7 @@ use App\Http\Controllers\PagesController;
 use App\Http\Controllers\UsersController;
 use Spatie\Backup\Tasks\Backup\BackupJob;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\MultimediaController;
 use Spatie\Backup\BackupDestination\BackupDestinationFactory;
@@ -34,9 +35,18 @@ Route::get('/optimize', function () {
     return 'DONE'; // return results
 });
 
-Route::redirect('/', 'login');
+// Route::redirect('/', 'login');
 
 Route::get('/dashboard', [PagesController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/', [PagesController::class, 'home'])->name('home');
+Route::get('/books-filter', [PagesController::class, 'books'])->name('books');
+
+
+
+
+
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -47,6 +57,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('categories', CategoriesController::class);
     Route::resource('books', BooksController::class);
     Route::resource('multimedia', MultimediaController::class);
+    Route::resource('settings', SettingsController::class);
 });
 
 

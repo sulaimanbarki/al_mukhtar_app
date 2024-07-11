@@ -13,4 +13,15 @@ class PagesController extends Controller
 
         return view('admin.index');
     }
+
+    public function home()
+    {
+        // return view('front.home');
+        return view('front.books');
+    }
+
+    public function books()
+    {
+        return view('front.books');
+    }
 }

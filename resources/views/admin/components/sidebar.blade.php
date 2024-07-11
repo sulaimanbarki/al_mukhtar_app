@@ -77,6 +77,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="/settings"
+                        class="nav-link
+                  @if (Request::is('settings')) active @endif
+                  ">
+                        <i class="nav-icon fas fa-cogs"></i>
+                        <p>
+                            Settings
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="/backupdb"
                         class="nav-link
                   @if (Request::is('backupdb')) active @endif
