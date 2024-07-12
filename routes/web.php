@@ -35,6 +35,12 @@ Route::get('/optimize', function () {
     return 'DONE'; // return results
 });
 
+// execute storage link
+Route::get('/command/{command}', function ($command) {
+    \Artisan::call($command);
+    return 'DONE'; // return results
+});
+
 // Route::redirect('/', 'login');
 
 Route::get('/dashboard', [PagesController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
