@@ -33,6 +33,8 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="icon" href="{{ asset('assets/Asset 12@12x.png') }}" type="image/x-icon" />
+
     @stack('styles')
 </head>
 
@@ -41,7 +43,7 @@
         <nav class="navbar-2">
             <div class="logo">
                 <div class="img">
-                    <a href="../index.html"><img src="{{$logo_path->logo_path}}" alt="" /></a>
+                    <a href="{{ route('front.home') }}"><img src="{{$logo_path->logo_path}}" alt="" /></a>
                 </div>
                 <div class="title">
                     <h4>{{ $settings['app_name'] ?? 'Al Mukhtar' }}<i class="fa-solid fa-grid"></i></h4>
