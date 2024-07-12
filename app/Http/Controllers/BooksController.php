@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\User;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -47,14 +48,27 @@ class BooksController extends Controller
             'isbn' => 'nullable',
             'publication_date' => 'nullable|date',
             'summary' => 'nullable',
-            'cover_image' => 'nullable|image',
-            'file_path' => 'nullable|file',
             'pages' => 'nullable|integer',
             'publisher' => 'nullable',
         ]);
 
+        $filePath = null;
+        if ($request->hasFile('file_path')) {
+            // Get the uploaded file
+            $file = $request->file('file_path');
+            // Create a unique name for the file
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            // Define the path where the file should be saved
+            $destinationPath = public_path('pdf');
+            // Move the file to the public/pdf directory
+            $file->move($destinationPath, $fileName);
+            // Construct the file path to be stored in the database
+            $filePath = 'pdf/' . $fileName;
+        }
+
         $book = new Book();
         $book->title = $request->title;
+        $book->slug = Str::slug($request->title);
         $book->user_id = $request->user_id;
         $book->category_id = $request->category_id;
         $book->isbn = $request->isbn;
@@ -62,12 +76,14 @@ class BooksController extends Controller
         $book->summary = $request->summary;
         $book->pages = $request->pages;
         $book->publisher = $request->publisher;
+        $book->file_path = $filePath;
         $book->save();
 
         $book->addAllMediaFromTokens();
 
         return redirect()->route('books.index');
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -107,6 +123,7 @@ class BooksController extends Controller
 
         $book = Book::findOrFail(decrypt($id));
         $book->title = $request->title;
+        $book->slug = Str::slug($request->title);
         $book->user_id = $request->user_id;
         $book->category_id = $request->category_id;
         $book->isbn = $request->isbn;

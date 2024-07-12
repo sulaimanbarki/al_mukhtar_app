@@ -40,7 +40,7 @@
                             <tr>
                                 <td>{{ $book->id }}</td>
                                 <td>{{ $book->title }}</td>
-                                <td>{{ $book->user->name }}</td>
+                                <td>{{ $book->user?->name ?? '' }}</td>
                                 <td>{{ $book->category?->name }}</td>
                                 <td>{{ $book->isbn }}</td>
                                 <td>{{ $book->publication_date }}</td>
