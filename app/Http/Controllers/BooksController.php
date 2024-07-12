@@ -133,7 +133,6 @@ class BooksController extends Controller
         $book->publisher = $request->publisher;
 
         if ($request->hasFile('file_path')) {
-            // Delete the old file if it exists
             if ($book->file_path) {
                 $oldFilePath = public_path(str_replace(env('APP_URL') . '/', '', $book->file_path));
                 if (file_exists($oldFilePath)) {
@@ -146,7 +145,7 @@ class BooksController extends Controller
             $fileName = time() . '_' . $file->getClientOriginalName();
             $filePath = 'pdf/' . $fileName;
             $file->move(public_path('pdf'), $fileName);
-            $book->file_path = env('APP_URL') . '/' . $filePath;
+            $book->file_path = $filePath;
         }
 
         $book->save();

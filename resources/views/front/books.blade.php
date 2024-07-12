@@ -157,7 +157,11 @@
                             <i class="fa-regular fa-heart"></i>
                         </button>
                     </div>
-                    <h5>{{ $book->title }}</h5>
+                    <h5>
+                        <a href="{{ route('book-details', $book->slug)}}">
+                        {{ $book->title }}
+                        </a>
+                    </h5>
                     {{-- <small><a href="">Adventure,</a><a href="">Thriller,</a><a
                             href="">Drama</a></small> --}}
                     <small><a href="">{{ $book->category->name }}</a></small>
