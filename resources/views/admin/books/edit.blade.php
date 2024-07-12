@@ -69,7 +69,7 @@
                                     accept="image/jpeg,image/png,image/jpg,image/gif"
                             ></file-uploader>
                         </div>
-                        <div>
+                        {{-- <div>
                             <file-uploader
                                     :unlimited="false"
                                     collection="file_path"
@@ -78,6 +78,10 @@
                                     notes="Supported types: pdf"
                                     accept="application/pdf"
                             ></file-uploader>
+                        </div> --}}
+                        <div class="form-group">
+                            <label>File (PDF Only)</label>
+                            <input type="file" name="file_path" class="form-control" accept="application/pdf">
                         </div>
                         <div class="form-group">
                             <label>Pages</label>
