@@ -131,12 +131,31 @@ class BooksController extends Controller
         $book->summary = $request->summary;
         $book->pages = $request->pages;
         $book->publisher = $request->publisher;
+
+        if ($request->hasFile('file_path')) {
+            // Delete the old file if it exists
+            if ($book->file_path) {
+                $oldFilePath = public_path(str_replace(env('APP_URL') . '/', '', $book->file_path));
+                if (file_exists($oldFilePath)) {
+                    unlink($oldFilePath);
+                }
+            }
+
+            // Store the new file
+            $file = $request->file('file_path');
+            $fileName = time() . '_' . $file->getClientOriginalName();
+            $filePath = 'pdf/' . $fileName;
+            $file->move(public_path('pdf'), $fileName);
+            $book->file_path = env('APP_URL') . '/' . $filePath;
+        }
+
         $book->save();
 
         $book->addAllMediaFromTokens();
 
-        return redirect()->route('books.index');
+        return redirect()->route('books.index')->with('success', 'Book updated successfully.');
     }
+
 
     /**
      * Remove the specified resource from storage.
