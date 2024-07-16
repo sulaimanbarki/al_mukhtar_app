@@ -43,7 +43,7 @@
         <nav class="navbar-2">
             <div class="logo">
                 <div class="img">
-                    <a href="{{ route('front.home') }}"><img src="{{$logo_path->logo_path}}" alt="" /></a>
+                    <a href="{{ route('front.home') }}"><img src="{{ $logo_path->logo_path }}" alt="" /></a>
                 </div>
                 <div class="title">
                     <h4>{{ $settings['app_name'] ?? 'Al Mukhtar' }}<i class="fa-solid fa-grid"></i></h4>
@@ -241,7 +241,7 @@
             });
         });
     </script>
-    
+
     <script src="{{ asset('front/js/repeat-js.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="{{ asset('front/js/back-to-top.js') }}"></script>

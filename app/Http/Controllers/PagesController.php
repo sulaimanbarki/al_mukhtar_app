@@ -6,6 +6,7 @@ use App\Models\Book;
 use App\Models\Certificate;
 use App\Models\Record;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
@@ -19,13 +20,21 @@ class PagesController extends Controller
     {
         // return view('front.home');
         $books = Book::paginate(8);
-        return view('front.books', compact('books'));
+        dd('welocme');
+        return view('front.index', compact('books'));
     }
 
     public function books()
     {
-        $books = Book::paginate(8);
-        return view('front.books', compact('books'));
+        $books = Book::get();
+        // return view('front.books', compact('books'));
+        // dd($books);
+        return view('front.index', compact('books'));
+    }
+    public function contactUs()
+    {
+        // return view('front.books', compact('books'));
+        return view('front.contact');
     }
 
     public function bookDetails($slug)
