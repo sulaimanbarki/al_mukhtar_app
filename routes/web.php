@@ -45,6 +45,7 @@ Route::get('/command/{command}', function ($command) {
 
 Route::get('/dashboard', [PagesController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/', [PagesController::class, 'books'])->name('front.home');
+Route::get('/contact-Us', [PagesController::class, 'contactUs'])->name('front.contact.us');
 Route::get('/books-filter', [PagesController::class, 'books'])->name('front.books');
 Route::get('/book-details/{slug}', [PagesController::class, 'bookDetails'])->name('book-details');
 
