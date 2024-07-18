@@ -40,6 +40,6 @@ class PagesController extends Controller
     public function bookDetails($slug)
     {
         $model = Book::where('slug', $slug)->first();
-        return view('front.book-details', compact('model'));
+        return view('front.book-detail', compact('model'));
     }
 }
