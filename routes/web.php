@@ -51,6 +51,7 @@ Route::get('/books-filter', [PagesController::class, 'books'])->name('front.book
 Route::get('/book-details/{slug}', [PagesController::class, 'bookDetails'])->name('book-details');
 
 Route::get('files/{id}/pdf', [PagesController::class, 'showPdf'])->name('files.pdf');
+Route::get('blog', [PagesController::class, 'blog'])->name('front.blog');
 
 
 

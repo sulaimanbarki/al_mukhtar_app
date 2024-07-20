@@ -66,4 +66,8 @@ class PagesController extends Controller
         return view('front.books-media-detail', compact('data'));
         // return view('front.book-details', compact('model'));
     }
+    public function blog()
+    {
+        return view('front.blog');
+    }
 }
