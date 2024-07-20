@@ -111,7 +111,7 @@
                                  <li class="dropdown">
                                      {{-- <a data-toggle="dropdown" class="dropdown-toggle disabled" --}}
 
-                                     <a href="#">Books &amp; Media</a>
+                                     <a href="{{ route('front.all_books') }}">Books &amp; Media</a>
                                      {{-- <ul class="dropdown-menu">
                                          <li><a href="books-media-list-view.html">Books &amp; Media List View</a>
                                          </li>
