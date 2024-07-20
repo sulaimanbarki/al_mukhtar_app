@@ -48,7 +48,8 @@ Route::get('/', [PagesController::class, 'books'])->name('front.home');
 Route::get('/all/books', [PagesController::class, 'all_books'])->name('front.all_books');
 Route::get('/contact-Us', [PagesController::class, 'contactUs'])->name('front.contact.us');
 Route::get('/books-filter', [PagesController::class, 'books'])->name('front.books');
-Route::get('/book-details/{slug}', [PagesController::class, 'bookDetails'])->name('book-details');
+// Route::get('/book-details/{slug}', [PagesController::class, 'bookDetails'])->name('book-details');
+Route::get('/book-detail/{slug}', [PagesController::class, 'bookDetails'])->name('book-details');
 
 Route::get('files/{id}/pdf', [PagesController::class, 'showPdf'])->name('files.pdf');
 Route::get('blog', [PagesController::class, 'blog'])->name('front.blog');
