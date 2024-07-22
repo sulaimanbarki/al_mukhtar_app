@@ -869,16 +869,26 @@
             </div>
             <ul>
                 <li>
-                    <a class="facebook" href="#" target="_blank">
+                    <a class="facebook" href="https://m.facebook.com/darulemaanotaqwaof?wtsid=rdr_02DpNTiScv6K9PNYQ"
+                        target="_blank">
                         <span>
                             <i class="fa fa-facebook-f"></i>
                         </span>
                     </a>
                 </li>
                 <li>
-                    <a class="twitter" href="#" target="_blank">
+                    <a class="twitter" href="https://x.com/emaanotaqwaoff?t=_weFiq_nXPYU2AJQfUP8Yw&s=09" target="_blank">
                         <span>
                             <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="insta"
+                        href="https://www.instagram.com/darul_eman_o_taqwa?utm_source=qr&igsh=MXQzbGw0c2VoYmY1aw=="
+                        target="_blank">
+                        <span>
+                            <i class="fa fa-instagram"></i>
                         </span>
                     </a>
                 </li>
@@ -890,13 +900,6 @@
                     </a>
                 </li>
                 <li>
-                    <a class="rss" href="#" target="_blank">
-                        <span>
-                            <i class="fa fa-rss"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
                     <a class="linkedin" href="#" target="_blank">
                         <span>
                             <i class="fa fa-linkedin"></i>
@@ -904,7 +907,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="youtube" href="#" target="_blank">
+                    <a class="youtube" href="https://youtube.com/@darulemaanotaqwa?si=4PxImuQ81S2JdOnL" target="_blank">
                         <span>
                             <i class="fa fa-youtube"></i>
                         </span>

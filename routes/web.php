@@ -53,6 +53,7 @@ Route::get('/book-detail/{slug}', [PagesController::class, 'bookDetails'])->name
 
 Route::get('files/{id}/pdf', [PagesController::class, 'showPdf'])->name('files.pdf');
 Route::get('blog', [PagesController::class, 'blog'])->name('front.blog');
+Route::get('video/audio', [PagesController::class, 'video_audio'])->name('front.video_audio');
 
 
 
