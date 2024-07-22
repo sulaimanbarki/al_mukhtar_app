@@ -126,7 +126,7 @@
                                      </ul> --}}
                                  </li>
                                  <li class="dropdown">
-                                     <a href="#">News &amp; Events</a>
+                                     <a href="{{ route('front.video_audio') }}">Video &amp; Audio </a>
 
                                      {{-- <a data-toggle="dropdown" class="dropdown-toggle disabled"
                                          href="news-events-list-view.html">News &amp; Events</a>

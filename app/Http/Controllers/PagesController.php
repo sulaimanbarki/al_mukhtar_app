@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Models\Certificate;
 use App\Models\Record;
+use App\Models\Multimedia;
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\File;
@@ -29,7 +31,7 @@ class PagesController extends Controller
     public function books()
     {
         $books = Book::take(10)->orderBy('id', 'desc')->get();
-        // return view('front.books', compact('books'));
+        $multimedia = Multimedia::take(10)->orderBy('id', 'desc')->get();
         // dd($books);
         return view('front.index', compact('books'));
     }
@@ -68,6 +70,11 @@ class PagesController extends Controller
     public function blog()
     {
         return view('front.blog');
-
+    }
+    public function video_audio()
+    {
+        $videos = Multimedia::where('type', 'video')->get();
+        $audios = Multimedia::where('type', 'audio')->get();
+        return view('front.video_audio', compact('videos', 'audios'));
     }
 }
