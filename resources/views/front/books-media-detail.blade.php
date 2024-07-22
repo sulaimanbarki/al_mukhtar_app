@@ -177,6 +177,13 @@
                                     </ul>
 
 
+                                    @php
+                                        $file_path = '/laraview/#../' . $data->file_path;
+                                    @endphp
+                                    <section class="book-overview">
+                                        <iframe src ="{{ asset($file_path) }}" width="100%" height="600px"></iframe>
+                                    </section>
+
                                 </div>
                             </div>
 
