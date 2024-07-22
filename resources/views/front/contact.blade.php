@@ -10,7 +10,7 @@
             </div>
             <div class="breadcrumb">
                 <ul>
-                    <li><a href="index-2.html">Home</a></li>
+                    <li><a href="{{ route('front.home') }}">Home</a></li>
                     <li>Contact</li>
                 </ul>
             </div>
@@ -119,7 +119,13 @@
                                             <div class="row">
                                                 <div class="col-md-12">
                                                     <div class="contact-map bg-light margin-left">
-                                                        <div class="company-map" id="map"></div>
+                                                        {{-- <div class="company-map" id="map"></div> --}}
+                                                        <div style="width: 100%"><iframe width="100%" height="525"
+                                                                frameborder="0" scrolling="no" marginheight="0"
+                                                                marginwidth="0"
+                                                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=kpITboard%20peshwar+(Al%20Mukhtar)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                                                    href="https://www.gps.ie/">gps trackers</a></iframe>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,8 +137,7 @@
                                                         <h2>Send us a message</h2>
                                                         <span class="underline left"></span>
                                                         <div class="contact-fields">
-                                                            <form id="contact" name="contact"
-                                                                action="http://libraria.demo.presstigers.com/contact.html"
+                                                            <form id="contact" name="contact" action="#"
                                                                 method="post">
                                                                 <div class="row">
                                                                     <div class="col-md-6 col-sm-6">
