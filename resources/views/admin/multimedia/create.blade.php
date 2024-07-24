@@ -21,6 +21,15 @@
                     <h3 class="card-title">Create Multimedia</h3>
                 </div>
                 <!-- /.card-header -->
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="card-body" id="app">
                     <form action="{{ route('multimedia.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
@@ -49,7 +58,7 @@
                                 <option value="video">Video</option>
                             </select>
                         </div>
-                        <div id="audio-file" style="display: none;">
+                        {{-- <div id="audio-file" style="display: none;">
                             <file-uploader
                                     :unlimited="false"
                                     collection="audio_file"
@@ -58,6 +67,12 @@
                                     notes="Supported types: mp3"
                                     accept="audio/mp3,audio/mpeg,audio/mp4,audio/wav,audio/ogg,audio/flac,audio/aac,audio/aacp,audio/x-m4a,audio/x-m4p,audio/x-m4b,audio/x-m4r,audio/x-m4v,audio/x-mp3,audio/x-mp4,audio/x-wav,audio/x-ogg,audio/x-flac,audio/x-aac,audio/x-aacp,audio/x-x-m4a,audio/x-x-m4p,audio/x-x-m4b,audio/x-x-m4r,audio/x-x-m4v,audio/x-x-mp3,audio/x-x-mp4,audio/x-x-wav,audio/x-x-ogg,audio/x-x-flac,audio/x-x-aac,audio/x-x-aacp"
                             ></file-uploader>
+                        </div> --}}
+
+                        {{-- // audio_file=input=file --}}
+                        <div class="form-group" id="audio-file" style="display: none;">
+                            <label for="path">Audio File</label>
+                            <input type="file" name="path" class="form-control" accept="audio/mp3,audio/mpeg">
                         </div>
                         <div class="form-group" id="video-link" style="display: none;">
                             <label for="path">Video Link</label>

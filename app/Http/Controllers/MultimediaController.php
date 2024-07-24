@@ -27,7 +27,8 @@ class MultimediaController extends Controller
             'description' => 'nullable',
             'category_id' => 'required|exists:categories,id',
             'type' => 'required|in:audio,video',
-            'path' => $request->type == 'audio' ? 'nullable' : 'required|url',
+            // 'path' => 'nullable|url',
+            'audio_file' => 'nullable|file|mimes:mp3,wav,ogg,flac',
         ]);
 
         $multimedia = new Multimedia();
@@ -38,8 +39,8 @@ class MultimediaController extends Controller
         $multimedia->path = $request->path;
         $multimedia->save();
 
-        if ($request->type == 'audio' && $request->has('audio_file')) {
-            $multimedia->addMediaFromTokens('audio_file')->toMediaCollection('audio_file');
+        if ($request->type == 'audio' && $request->path) {
+            $multimedia->addMediaFromRequest('path')->toMediaCollection('audio_file');
         }
 
         return redirect()->route('multimedia.index');
