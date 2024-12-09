@@ -1,0 +1,436 @@
+/* custom web fonts */
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  /* background-color: #F9FAFB; */
+}
+.logo {
+  /* position: absolute; */
+  width: 160px;
+  height: 70px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-left: 30px;
+}
+
+.nav-link.active {
+  background-color: #f7931e;
+  border-radius: 10px;
+  color: white !important;
+  margin: 0px 10px 0px 10px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #f7931e;
+  border-radius: 10px;
+}
+
+.nav_moon_icon {
+  margin-right: 10px;
+  /* border: 1px solid black; */
+  padding: 4px;
+  background-color: gray;
+  border-radius: 5px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.nav_btn {
+  color: white !important;
+  background-color: #f7931e !important;
+  margin-right: 50px !important;
+  text-align: center;
+}
+.nav_button_hand {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+/* ------hero section start------ */
+.main_hero {
+  background-image: url(./assets/images/Hero\ Section.svg);
+  background-repeat: no-repeat;
+  background-position: center top 100%; /* Position the image at the bottom */
+  background-size: cover; /* Ensure the image scales properly within the container */
+}
+.kalma_image {
+  background-image: url(./assets/images/bismillah.png);
+  background-repeat: no-repeat;
+  background-size: contain; /* Ensure the image scales properly within the container */
+  background-size: 50%;
+}
+.hero_heading {
+  margin-top: 80px;
+  -webkit-text-stroke-width: 0.699999988079071;
+  -webkit-text-stroke-color: #fff;
+  font-family: Arial;
+  font-size: 49.273px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 69.803px; /* 141.667% */
+  letter-spacing: -0.493px;
+}
+.hero_paragraph {
+  /* color: #FFF; */
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+  letter-spacing: -0.14px;
+}
+
+.hero_search_btn {
+  background-color: #f7931e !important;
+  border: none !important;
+}
+.form-control:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.hero_top_contents {
+  position: relative; /* Establishes a positioning context for absolutely positioned elements */
+}
+
+.hero-mosque {
+  position: relative; /* Keeps the mosque image in its original flow */
+  width: 346px; /* Adjust width as needed */
+  height: 300px; /* Maintain aspect ratio */
+  margin-left: 104px;
+  margin-bottom: -30px;
+  margin-top: -40px;
+}
+
+.hero-image img {
+  width: 400px;
+  height: 350px;
+  margin-left: 84px;
+  margin-bottom: -60px !important;
+}
+.carousel {
+  position: relative;
+}
+.hero-indicators{
+  position: absolute; /* Position indicators absolutely */
+  left: 100%; /* Center horizontally */
+  z-index: 10;
+}
+.hero-indicators button {
+  width: 8px !important;
+  height: 10px !important;
+  border: 5px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.hero-indicators .active {
+  background-color: #fff; /* Active indicator color */
+}
+.carousel-inner {
+  padding-bottom: 30px; /* Adjust based on the size of the indicators */
+}
+.carousel-item .hero-para {
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  text-align: justify;
+  margin: 0px;
+}
+
+
+
+/* -------Hadis section start-------- */
+.book0f_hadith {
+  background-color: #f9fafb;
+}
+.hadith_btn {
+  width: 230px !important;
+  height: 40px;
+  border-radius: 5px !important;
+  gap: 10px;
+  color: white !important;
+  background-color: #f7931e !important;
+}
+.al_hadith_icons_before {
+  width: 25px;
+  height: 25px;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 4px;
+}
+.al_hadith_icons {
+  width: 15px;
+  height: 15px;
+}
+.hadith_headings h3 {
+  font-size: 48px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 18px;
+  letter-spacing: -1%;
+}
+.hadith_sub_heading {
+  color: #02c6a9;
+}
+.hadith_paragraph {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -1%;
+  text-align: center !important;
+  margin-top: 30px;
+  width: 623px;
+}
+
+.hadith_card {
+  width: 229px;
+  height: 290px !important;
+  border-radius: 13px;
+  padding: 20px 16px 20px 16px;
+  background-color: #fff;
+  box-shadow: 0px 2.32px 46px 0px #0000000f;
+  border: none !important;
+}
+.hadith_card p {
+  margin-top: -5px;
+}
+
+.hadith_card img {
+  width: 133px;
+  height: 190px;
+  object-fit: cover;
+  margin-left: 35px;
+}
+.hadith_second_row {
+  margin-bottom: -45px;
+}
+
+/* ------end----- */
+
+/* prophet_message css  */
+
+.prophet_message {
+  background-color: #F9FAFB;
+}
+.carousel {
+  position: relative;
+}
+.custom-indicators {
+  position: absolute; /* Position indicators absolutely */
+  bottom: -60px !important;
+  left: 50%; /* Center horizontally */
+  z-index: 10;
+}
+.custom-indicators button {
+  width: 8px !important;
+  height: 10px !important;
+  border: 5px dashed rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  transition: border-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.custom-indicators .active {
+  background-color: #fff; /* Active indicator color */
+}
+/* Optional: Adjust the size of the carousel items to fit the new indicator size */
+.carousel-inner {
+  padding-bottom: 30px; /* Adjust based on the size of the indicators */
+}
+
+/* Set a specific width and height for the container */
+.message_container {
+  width: 80% !important;
+  max-width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #02bab3;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.message_container {
+  background-image: url(./assets/images/message_mosque_image.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  fill: radial-gradient(
+    79.2% 85.44% at 49.98% 49.48%,
+    rgba(255, 255, 255, 0) 0%,
+    #02bab3 100%
+  );
+  opacity: 1;
+}
+.carousel-item p {
+  color: #fff;
+  text-align: center;
+  font-family: Arial;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 138.462% */
+  letter-spacing: -0.26px;
+}
+
+/* Responsive adjustments */
+/* ------subjective section css start-------- */
+.subjective_card {
+  width: 232px;
+  height: 160px;
+  position: relative;
+  border: none !important;
+  box-shadow: 0px 2.32px 46px 0px #0000000f;
+}
+.subjective_card img {
+  width: 60px;
+  height: 20px;
+  top: 15px;
+  position: absolute;
+  font-size: 34px;
+  right: 5px;
+}
+
+.hadith_paragraph {
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -1%;
+  text-align: center !important;
+  margin-top: 30px;
+  width: 700px !important;
+}
+
+/*------- end --------  */
+.app_marketing {
+  background-color: #f9fafb;
+  padding: 20px;
+}
+.custom_marketing_container {
+  background: linear-gradient(277.64deg, #02bab3 0.56%, #f8fdfb 98.92%);
+  width: 1000px !important;
+  height: 280px;
+  border-radius: 15px;
+}
+.mobileapp_image {
+  margin-top: -70px;
+}
+.marketing_heading h3 {
+  margin-left: 40px;
+  font-weight: 600;
+}
+.marketing_heading .marketing_paragraph {
+  margin-left: 40px;
+}
+.app_store_image {
+  margin-left: 33px;
+}
+.google_play_image {
+  margin-left: 8px;
+}
+.mobile_image {
+  margin-top: -90px !important;
+}
+.download_app_vector_image {
+  background-image: url(./assets/images/download_app_vector.png);
+  background-repeat: no-repeat;
+  background-position: center top 100%; /* Position the image at the bottom */
+  background-size: contain; /* Ensure the image scales properly within the container */
+}
+
+/* end */
+
+/* footer css */
+.footer_section {
+  background-color: #f9fafb;
+}
+.footer_logo {
+  width: 130px;
+  height: 54px;
+  /* margin-top: 10px; */
+  margin-left: 20px;
+}
+.footer-content {
+  width: 370px;
+}
+.footer-content h5 {
+  margin-left: 20px;
+}
+.footer-content p {
+  margin-left: 20px;
+}
+.footer-content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -1;
+}
+.navigate_contents {
+  /* width: 89px; */
+  font-size: 14px;
+  line-height: 24px !important;
+  margin-top: 60px;
+  margin-left: 20px;
+  letter-spacing: -1%;
+}
+.navigate_contents p {
+  color: black;
+  margin: 5px;
+}
+.ourproject_contents {
+  font-size: 14px;
+  line-height: 24px !important;
+  margin-top: 60px;
+  margin-left: 20px;
+  letter-spacing: -1%;
+}
+.ourproject_contents p {
+  color: black !important;
+  margin: 5px;
+  margin-left: 0px;
+}
+.sub_contents {
+  font-size: 14px;
+  line-height: 24px !important;
+  margin-top: 98px;
+  margin-left: 20px;
+  letter-spacing: -1%;
+}
+.sub_contents p {
+  color: black;
+  margin: 5px;
+  margin-left: 0px;
+}
+.footer-background-image {
+  background-image: url(./assets/images/footer-background.png);
+  background-repeat: no-repeat;
+  background-position: center top 100%; /* Position the image at the bottom */
+  background-size: contain; /* Ensure the image scales properly within the container */
+}
+.ourproject_contents {
+  position: relative;
+}
+.camel-image {
+  position: absolute;
+  margin-top: 120px;
+}
+.footer_content img {
+  position: absolute;
+  margin-top: 30px;
+}
+.popular-small-tree {
+  margin-top: 65px !important;
+}
+.popular-large-tree {
+  margin-top: 30px;
+}
+
+

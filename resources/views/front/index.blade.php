@@ -1,921 +1,397 @@
 @extends('front.layout.master')
 @section('content')
     <!-- End: Header Section -->
-
-    <!-- Start: Slider Section -->
-    <div data-ride="carousel" class="carousel slide" id="home-v1-header-carousel">
-
-        <!-- Carousel slides -->
-        <div class="carousel-inner">
-            <div class="item active">
-                <figure>
-                    <img alt="Home Slide" src="{{ asset('front_assets/images/header-slider/home-v1/header-slide.jpg') }}" />
-                </figure>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h3>Online Learning Anytime, Anywhere!</h3>
-                        <h2>Discover Your Roots</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humor, or randomized words.</p>
-                        <div class="slide-buttons hidden-sm hidden-xs">
-                            <a href="#" class="btn btn-primary">Read More</a>
-                            <a href="#" class="btn btn-default">Purchase</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img alt="Home Slide" src="{{ asset('front_assets/images/header-slider/home-v1/header-slide.jpg') }}" />
-                </figure>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h3>Online Learning Anytime, Anywhere!</h3>
-                        <h2>Discover Your Roots</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humor, or randomized words.</p>
-                        <div class="slide-buttons hidden-sm hidden-xs">
-                            <a href="#" class="btn btn-primary">Read More</a>
-                            <a href="#" class="btn btn-default">Purchase</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <figure>
-                    <img alt="Home Slide" src="{{ asset('front_assets/images/header-slider/home-v1/header-slide.jpg') }}" />
-                </figure>
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h3>Online Learning Anytime, Anywhere!</h3>
-                        <h2>Discover Your Roots</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form, by injected humor, or randomized words.</p>
-                        <div class="slide-buttons hidden-sm hidden-xs">
-                            <a href="#" class="btn btn-primary">Read More</a>
-                            <a href="#" class="btn btn-default">Purchase</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#home-v1-header-carousel" data-slide="prev"></a>
-        <a class="right carousel-control" href="#home-v1-header-carousel" data-slide="next"></a>
-    </div>
-    <!-- End: Slider Section -->
-
-    <!-- Start: Search Section -->
-    <section class="search-filters">
+    <!-- hero section start -->
+    <section class="main_hero p-5">
         <div class="container">
-            <div class="filter-box">
-                <h3>What are you looking for at the Al Mukhtar?</h3>
-                <form action="http://libraria.demo.presstigers.com/index.html" method="get">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="form-group">
-                            <label class="sr-only" for="keywords">Search by Keyword</label>
-                            <input class="form-control" placeholder="Search by Keyword" id="keywords" name="keywords"
-                                type="text">
+            <div class="row hero_vector_image">
+                <div class=" col-sm-12 col-md-12 col-lg-6 kalma_image">
+                    <div class="hero_heading">
+                        <h2 class="text-white">Find Your Favorite <br> hadith</h2>
+                    </div>
+                    <div class="input-group mb-3 search_bar">
+                        <input type="text" class="form-control p-2 border" placeholder="write here..."
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-sliders"></i>
+                        </span>
+                        <button class="btn btn-secondary hero_search_btn" type="button" id="button-addon2">
+                            <i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                    </div>
+                    <div class="hero_paragraph">
+                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                            data-bs-interval="3000">
+                            <div class="carousel-indicators hero-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <p class="hero-para">He said, the Messenger of Allah (PBUH) said: When a Muslim performs
+                                        ablution properly, faces Allah with concentration and prays two rak'ahs, Paradise is
+                                        guaranteed for him.</p>
+                                    <p class="hero-para">Sahih Fazayel Amal: 87</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="hero-para">He said, the Messenger of Allah (PBUH) said: When a Muslim performs
+                                        ablution properly, faces Allah with concentration and prays two rak'ahs, Paradise is
+                                        guaranteed for him.</p>
+                                    <p class="hero-para">Sahih Fazayel Amal: 87</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <p class="hero-para">He said, the Messenger of Allah (PBUH) said: When a Muslim performs
+                                        ablution properly, faces Allah with concentration and prays two rak'ahs, Paradise is
+                                        guaranteed for him.</p>
+                                    <p class="hero-para">Sahih Fazayel Amal: 87</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                            <select name="catalog" id="catalog" class="form-control">
-                                <option>Search the Catalog</option>
-                                <option>Catalog 01</option>
-                                <option>Catalog 02</option>
-                                <option>Catalog 03</option>
-                                <option>Catalog 04</option>
-                                <option>Catalog 05</option>
-                            </select>
-                        </div>
+                </div>
+                <div class="col-md-6 sub-hero-bg-image">
+                    <div class="hero_top_contents">
+                        <img src="{{ asset('front_new/assets/images/right_hero_mosque.svg') }}" alt=""
+                            class="img-fluid hero-mosque">
                     </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="form-group">
-                            <select name="category" id="category" class="form-control">
-                                <option>All Categories</option>
-                                <option>Category 01</option>
-                                <option>Category 02</option>
-                                <option>Category 03</option>
-                                <option>Category 04</option>
-                                <option>Category 05</option>
-                            </select>
-                        </div>
+                    <div class="hero-image">
+                        <img src="{{ asset('front_new/assets/images/Group 1171274966.png') }}" alt=""
+                            class="img-fluid hero-mobile-image position-relative">
                     </div>
-                    <div class="col-md-2 col-sm-6">
-                        <div class="form-group">
-                            <input class="form-control" type="submit" value="Search">
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </section>
-    <!-- End: Search Section -->
+    <!-- end -->
 
-    <!-- Start: Welcome Section -->
-    <section class="welcome-section">
+
+    <!-- book of hadith section start -->
+    <section class="book0f_hadith  py-5">
         <div class="container">
+            <div class="row d-flex justify-content-center">
+                <a href="{{ route('front.all_books') }}" class="btn btn-outline  text-decoration-none hadith_btn"> <i
+                        class="fa-brands fa-slack me-1 al_hadith_icons_before"></i> All Hadith books <i
+                        class="fa-solid fa-arrow-right al_hadith_icons ms-2" style="width: 20px;"></i></a>
+                <div class="hadith_headings mt-5">
+                    <h3 class="text-center">Books of <span class="hadith_sub_heading"> Hadis</span></h3>
+                </div>
+                <p class="hadith_paragraph mt-4">The books of hadith are an important source of guidance and inspiration for
+                    <br class="hadith_br"> Muslims. These books provide insight into the Seerat (biography) and guidance of
+                    the <br class="hadith_br">Prophet Muhammad (peace be upon him).
+                </p>
+            </div>
             <div class="row">
-                <div class="col-md-6 ">
-                    <div class="welcome-wrap">
-                        <div class="welcome-text">
-                            <h2 class="section-title">Welcome to the Al Mukhtar</h2>
-                            <span class="underline left"></span>
-                            <p class="lead">The standard chunk of Lorem Ipsum used since</p>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                                suffered alteration in some form, by injected humor, or randomized words which don't
-                                look even slightly believable. If you are going to use a passage of Lorem Ipsum, you
-                                need to be sure there isn't anything embarrassing hidden in the middle of text. All the
-                                Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
-                                making this the first true generator on the Internet. It uses a dictionary of over 200
-                                Latin words, combined with a handful of model sentence structures, to generate Lorem
-                                Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from
-                                repetition, injected humor, or non-characteristic words etc.</p>
-                            <a class="btn btn-primary" href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="facts-counter">
-                        <ul>
-                            <li class="bg-light-green">
-                                <div class="fact-item">
-                                    <div class="fact-icon">
-                                        <i class="ebook"></i>
-                                    </div>
-                                    <span>eBooks<strong class="fact-counter">45780</strong></span>
-                                </div>
-                            </li>
-                            <li class="bg-green">
-                                <div class="fact-item">
-                                    <div class="fact-icon">
-                                        <i class="eaudio"></i>
-                                    </div>
-                                    <span>eAudio<strong class="fact-counter">32450</strong></span>
-                                </div>
-                            </li>
-                            <li class="bg-red">
-                                <div class="fact-item">
-                                    <div class="fact-icon">
-                                        <i class="magazine"></i>
-                                    </div>
-                                    <span>Magazine<strong class="fact-counter">14450</strong></span>
-                                </div>
-                            </li>
-                            <li class="bg-blue">
-                                <div class="fact-item">
-                                    <div class="fact-icon">
-                                        <i class="videos"></i>
-                                    </div>
-                                    <span>Videos<strong class="fact-counter">32450</strong></span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="welcome-image" style="background-image: url('{{ asset('front_assets/images/banner.jpg') }}');"></div>
-    </section>
-    <!-- End: Welcome Section -->
-
-    <!-- Start: Category Filter -->
-    <section class="category-filter section-padding"
-        style="background-image: url('{{ asset('front_assets/images/project-filter-bg-home-v1.jpg') }}');">
-
-        <div class="container">
-            <div class="center-content">
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3">
-                        <h2 class="section-title">Check Out The New Releases</h2>
-                        <span class="underline center"></span>
-                        <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below
-                            for those interested.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="filter-buttons">
-                <div class="filter btn" data-filter="all">All Releases</div>
-                <div class="filter btn" data-filter=".adults">Adults</div>
-                <div class="filter btn" data-filter=".kids-teens">Kids &amp; Teens</div>
-                <div class="filter btn" data-filter=".video">Video</div>
-                <div class="filter btn" data-filter=".audio">Audio</div>
-                <div class="filter btn" data-filter=".books">Books</div>
-                <div class="filter btn" data-filter=".magazines">Magazines</div>
-            </div>
-        </div>
-        <div id="category-filter">
-            <ul class="category-list">
                 @foreach ($books as $data)
-                    {{-- @dump($data); --}}
-                    <li class="category-item adults">
-                        <figure>
-                            {{-- <img src="{{ asset('front_assets/images/category-filter/home-v1/category-filter-img-01.jpg') }}"
-                                alt="New Releaase" /> --}}
-                            <img src="{{ $data->getFirstMediaUrl('cover_image') }}"alt="New Releaase">
-
-                            <figcaption class="bg-orange">
-                                <div class="info-block">
-                                    <h4>{{ $data->title }}</h4>
-                                    <span class="author"><strong>Author:</strong>{{ $data->user->name }}</span>
-                                    <span class="author"><strong>ISBN:</strong> {{ $data->isbn }}</span>
-                                    <div class="rating">
-                                        <span>☆</span>
-                                        <span>☆</span>
-                                        <span>☆</span>
-                                        <span>☆</span>
-                                        <span>☆</span>
-                                    </div>
-                                    <p>{{ Str::limit($data->summary, 200) }}</p>
-                                    <a href="{{ route('book-details', $data->slug) }}">Read More <i
-                                            class="fa fa-long-arrow-right"></i></a>
-                                    <ol>
-
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-eye"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-envelope"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-share-alt"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fa fa-search"></i>
-                                            </a>
-                                        </li>
-                                    </ol>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </li>
+                    <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                        <a href="{{ route('book-details', $data->slug) }}" class="text-decoration-none">
+                            <div class="card  hadith_card">
+                                <img class="card-img-top" src="{{ $data->getFirstMediaUrl('cover_image') }}"
+                                    alt="Card image cap ">
+                                <h5 class="text-center">{{ $data->title ?? '' }}</h5>
+                                <p class="text-center"><strong>ISBN:</strong> {{ $data->isbn }}</p>
+                            </div>
+                        </a>
+                    </div>
                 @endforeach
-            </ul>
-            <div class="center-content">
-                <a href="{{ route('front.all_books') }}" class="btn btn-primary">View More</a>
+
+                {{-- <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card-2.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card-3.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card-4.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div> --}}
             </div>
-            <div class="clearfix"></div>
+
+            {{-- <div class="row mt-1 hadith_second_row">
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card_5.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card_6.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card_7.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card  hadith_card">
+                            <img class="card-img-top" src="./assets/images/card_8.png" alt="Card image cap">
+                            <h5 class="text-center">Sahih Bukhari</h5>
+                            <p class="text-center">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+            </div> --}}
         </div>
     </section>
-    <!-- Start: Category Filter -->
 
-    <!-- Start: Features -->
-    <section class="features">
-        <div class="container">
-            <ul>
-                <li class="bg-yellow">
-                    <div class="feature-box">
-                        <i class="yellow"></i>
-                        <h3>Books</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar
-                            varius dui id, convallis iaculis eros.</p>
-                        <a class="yellow" href="#">
-                            View Selection <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </li>
-                <li class="bg-light-green">
-                    <div class="feature-box">
-                        <i class="light-green"></i>
-                        <h3>eBooks</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar
-                            varius dui id, convallis iaculis eros.</p>
-                        <a class="light-green" href="#">
-                            View Selection <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </li>
-                <li class="bg-blue">
-                    <div class="feature-box">
-                        <i class="blue"></i>
-                        <h3>DVDs</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar
-                            varius dui id, convallis iaculis eros.</p>
-                        <a class="blue" href="#">
-                            View Selection <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </li>
-                <li class="bg-red">
-                    <div class="feature-box">
-                        <i class="red"></i>
-                        <h3>Magazines</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar
-                            varius dui id, convallis iaculis eros.</p>
-                        <a class="red" href="#">
-                            View Selection <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </li>
-                <li class="bg-violet">
-                    <div class="feature-box">
-                        <i class="violet"></i>
-                        <h3>Audio</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar
-                            varius dui id, convallis iaculis eros.</p>
-                        <a class="violet" href="#">
-                            View Selection <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </li>
-                <li class="bg-green">
-                    <div class="feature-box">
-                        <i class="green"></i>
-                        <h3>eAudio</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor turpis, pulvinar
-                            varius dui id, convallis iaculis eros.</p>
-                        <a class="green" href="#">
-                            View Selection <i class="fa fa-long-arrow-right"></i>
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <!-- End: Features -->
-
-    <!-- Start: Newsletter -->
-    <section class="newsletter section-padding">
-        <div class="container">
+    <!-- prophet message section -->
+    <section class="prophet_message py-5">
+        <div class="container message_container">
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                    <div class="center-content">
-                        <h2 class="section-title">Subscribe to our Newsletters</h2>
-                        <span class="underline center"></span>
-                        <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below
-                            for those interested.</p>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Enter your Email!" id="newsletter" name="newsletter"
-                            type="email">
-                        <input class="form-control" value="Subscribe" type="submit">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End: Newsletter -->
-
-    <!-- Start: Meet Staff -->
-    <section class="team section-padding">
-        <div class="container">
-            <div class="center-content">
-                <h2 class="section-title">Meet Our Staff</h2>
-                <span class="underline center"></span>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="team-list">
-                <div class="team-member">
-                    <figure>
-                        <img src="{{ asset('front_assets/images/team-img-01.jpg') }}" alt="team" />
-                    </figure>
-                    <div class="content-block">
-                        <div class="member-info">
-                            <h4>David J. Seleb</h4>
-                            <span class="designation">Executive Director</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-skype"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                                letters, as opposed to using 'Content here...</p>
-                            <a class="btn btn-primary" href="#">Read More</a>
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                        data-bs-interval="3000">
+                        <div class="carousel-indicators custom-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <figure>
-                        <img src="{{ asset('front_assets/images/team-img-02.jpg') }}" alt="team" />
-                    </figure>
-                    <div class="content-block">
-                        <div class="member-info">
-                            <h4>Robert Simmons</h4>
-                            <span class="designation">Deputy Director</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-skype"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                                letters, as opposed to using 'Content here...</p>
-                            <a class="btn btn-primary" href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <figure>
-                        <img src="{{ asset('front_assets/images/team-img-03.jpg') }}" alt="team" />
-                    </figure>
-                    <div class="content-block">
-                        <div class="member-info">
-                            <h4>Anna Delpan</h4>
-                            <span class="designation">Librarian</span>
-                            <ul class="social">
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-linkedin"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" target="_blank">
-                                        <i class="fa fa-skype"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of
-                                letters, as opposed to using 'Content here...</p>
-                            <a class="btn btn-primary" href="#">Read More</a>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <p>The Prophet (peace and blessings of Allah be upon him) said, “The best of you is the one
+                                    who is the best in character” (Bukhari, Muslim, Mishkat Ha/5075).</p>
+                                <p>Sahih Fazayel Amal: 87</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p>The Prophet (peace and blessings of Allah be upon him) said, “The best of you is the one
+                                    who is the best in character” (Bukhari, Muslim, Mishkat Ha/5075).</p>
+                                <p>Sahih Fazayel Amal: 87</p>
+                            </div>
+                            <div class="carousel-item">
+                                <p>The Prophet (peace and blessings of Allah be upon him) said, “The best of you is the one
+                                    who is the best in character” (Bukhari, Muslim, Mishkat Ha/5075).</p>
+                                <p>Sahih Fazayel Amal: 87</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End: Meet Staff -->
 
-    <!-- Start: Latest Blog -->
-    <section class="latest-blog section-padding banner"
-        style="background-image: url('{{ asset('front_assets/images/latest-blog-bg-home-v1.jpg') }}');">
 
+    <!-- booke of hadith section -->
+    <section class="book0f_hadith">
         <div class="container">
-            <div class="center-content">
-                <h2 class="section-title">Latest from Blog</h2>
-                <span class="underline center"></span>
-                <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
-                    interested.</p>
-            </div>
-            <div class="tabs-container">
-                <div class="tabs-menu">
-                    <ul>
-                        <li class="active">
-                            <a href="#" class="bg-yellow">
-                                <div class="title">
-                                    <i class="yellow"></i>
-                                    <h3>Books</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="bg-light-green">
-                                <div class="title">
-                                    <i class="light-green"></i>
-                                    <h3>eBooks</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="bg-blue">
-                                <div class="title">
-                                    <i class="blue"></i>
-                                    <h3>DVDS</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="bg-red">
-                                <div class="title">
-                                    <i class="red"></i>
-                                    <h3>Magazines</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="bg-violet">
-                                <div class="title">
-                                    <i class="violet"></i>
-                                    <h3>Audio</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="bg-green">
-                                <div class="title">
-                                    <i class="green"></i>
-                                    <h3>eAudio</h3>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="row d-flex justify-content-center">
+                <div class="hadith_headings mt-5">
+                    <h3 class="text-center">Subjective <span class="hadith_sub_heading"> Hadith</span></h3>
                 </div>
-                <div class="tabs-list">
-                    <div class="tab-content active">
-                        <article>
-                            <figure>
-                                <img src="{{ asset('front_assets/images/latest-blog-img-home-v1.jpg') }}"
-                                    alt="Latest Blog">
-                                <figcaption>
-                                    <a href="#.">
-                                        <span class="date">07</span>
-                                        <span class="month">Mar</span>
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <div class="post-detail">
-                                <div class="info-bar">
-                                    <div class="comments">
-                                        <a href="#">
-                                            <i class="fa fa-comment"></i> 37
-                                        </a>
-                                    </div>
-                                    <div class="likes">
-                                        <a href="#">
-                                            <i class="fa fa-thumbs-o-up"></i> 110
-                                        </a>
-                                    </div>
-                                    <div class="viewed">
-                                        <a href="#">
-                                            <i class="fa fa-eye"></i> 180
-                                        </a>
-                                    </div>
-                                    <div class="share">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i> Share
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4>It uses dictionary over 200 Latin</h4>
-                                <div class="author">
-                                    <a href="#">
-                                        <i class="fa fa-user"></i> Adrey Pachai
-                                    </a>
-                                </div>
-                                <p>Etiam posuere ultrices mauris vitae tincidunt. Cras lacinia, lectus quis ullamcorper
-                                    auctor, mauris lacus imperdiet turpis, et semper enim massa ut diam. Sed at
-                                    malesuada urna. Mauris quis venenatis leo. Proin a malesuada purus. Suspendisse odio
-                                    diam, ornare sit amet interdum ut, vehicula a lorem. Donec a sem erat. Etiam
-                                    condimentum semper mauris vitae porttitor.</p>
-                                <a class="btn btn-dark-gray">Read More</a>
+                <p class="hadith_paragraph mt-4">Thematic hadiths are collections of hadiths organized by topic rather than
+                    by
+                    narrator or chain of transmission. Through this, it is possible to easily gain knowledge on certain
+                    topics of
+                    Islam. This compilation can also be helpful for scholars and teachers who want <br> to teach specific
+                    subjects.</p>
+            </div>
+
+
+            <div class="row d-flex justify-content-center">
+                {{-- <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#3498db" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">১</text>
+                            </svg>
+                            <img class="card-img-top img-fluid" src="./assets/images/عقيدة.png">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">২</text>
+                            </svg>
+                            <img class="card-img-top img-fluid" src="./assets/images/إيمان.png">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">৩</text>
+                            </svg>
+                            <img class="card-img-top img-fluid" src="./assets/images/حرمة.png">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">৪</text>
+                            </svg>
+                            <img class="card-img-top img-fluid" src="./assets/images/قصص الحديث.png">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">৫</text>
+                            </svg>
+                            <img class="card-img-top img-fluid" src="./assets/images/الصلاة.png">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">৬</text>
+                            </svg>
+                            <img class="card-img-top img-fluid" src="./assets/images/التبرع صدقة.png">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div> --}}
+                @foreach ($books as $data)
+                    <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                        <a href="{{ route('book-details', $data->slug) }}" class="text-decoration-none">
+                            <div class="card w-100 subjective_card">
+                                <svg width="40" height="40" viewBox="0 0 100 100"
+                                    style="margin-left: 10px; margin-top:5px">
+                                    <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                    <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                        font-family="Arial" dy=".5em">৭</text>
+                                </svg>
+                                <img class="card-img-top img-fluid"
+                                    src="{{ asset('front_new/assets/images/حقوق الحيوان.png') }}">
+                                <h5 class="mt-5 ms-3">{{ $data->title ?? '' }}</h5>
+                                <p class="ms-3"> </p>
                             </div>
-                        </article>
+                        </a>
                     </div>
-                    <div class="tab-content">
-                        <article>
-                            <figure>
-                                <img src="{{ asset('front_assets/images/latest-blog-img-home-v1-2.jpg') }}"
-                                    alt="Latest Blog">
-                                <figcaption>
-                                    <a href="#.">
-                                        <span class="date">06</span>
-                                        <span class="month">Mar</span>
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <div class="post-detail">
-                                <div class="info-bar">
-                                    <div class="comments">
-                                        <a href="#">
-                                            <i class="fa fa-comment"></i> 37
-                                        </a>
-                                    </div>
-                                    <div class="likes">
-                                        <a href="#">
-                                            <i class="fa fa-thumbs-o-up"></i> 110
-                                        </a>
-                                    </div>
-                                    <div class="viewed">
-                                        <a href="#">
-                                            <i class="fa fa-eye"></i> 180
-                                        </a>
-                                    </div>
-                                    <div class="share">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i> Share
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4>eBooks</h4>
-                                <div class="author">
-                                    <a href="#">
-                                        <i class="fa fa-user"></i> Adrey Pachai
-                                    </a>
-                                </div>
-                                <p>Sed at malesuada urna. Mauris quis venenatis leo. Proin a malesuada purus.
-                                    Suspendisse odio diam, ornare sit amet interdum ut, vehicula a lorem. Donec a sem
-                                    erat. Etiam condimentum semper mauris vitae porttitor. Etiam posuere ultrices mauris
-                                    vitae tincidunt. Cras lacinia, lectus quis ullamcorper auctor, mauris lacus
-                                    imperdiet turpis, et semper enim massa ut.</p>
-                                <a class="btn btn-dark-gray">Read More</a>
-                            </div>
-                        </article>
+                @endforeach
+                {{-- <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
+                    <a href="" class="text-decoration-none">
+                        <div class="card w-100 subjective_card">
+                            <svg width="40" height="40" viewBox="0 0 100 100"
+                                style="margin-left: 10px; margin-top:5px">
+                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
+                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
+                                    font-family="Arial" dy=".5em">৮</text>
+                            </svg>
+                            <img class="card-img-top img-fluid"
+                                src="{{ asset('front_new/assets/images/الأفعال والفضائل.png') }}">
+                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
+                            <p class="ms-3">Hadith Range 7563</p>
+                        </div>
+                    </a>
+                </div> --}}
+
+                <a href="{{ route('front.all_books') }}" class="btn btn-outline  text-decoration-none hadith_btn mt-4">
+                    <i class="fa-brands fa-slack me-1 al_hadith_icons_before"></i> View All categories<i
+                        class="fa-solid fa-arrow-right al_hadith_icons ms-2" style="width: 20px;"></i></a>
+                {{-- <a href="{{ route('front.all_books') }}" class="btn btn-primary">View More</a> --}}
+
+            </div>
+        </div>
+    </section>
+
+    <!-- app marketing section -->
+    <section class="app_marketing py-5">
+        <div class="container custom_marketing_container">
+            <div class="row download_app_vector_image">
+                <div class=" col-sm-12 col-md-8">
+                    <div class="marketing_heading mt-4">
+                        <h3 class="">Download <br class="marketing_br">
+                            Al Mukhtar Mobile App</h3>
+                        <p class="marketing_paragraph">With Al Mukhtar app, you can easily do many things including <br>
+                            reading
+                            Hadith, bookmarking, online syncing. Download our app now!</p>
+                        <div class="app_paltform ">
+                            <a href="" class="text-decoration-none"> <img
+                                    src="{{ asset('front_new/assets/images/AppstoreAvailabl.svg') }}" alt=""
+                                    class="img-fluid app_store_image"></a>
+                            <a href="" class="text-decoration-none"> <img
+                                    src="{{ asset('front_new/assets/images/Google_play_dark.svg') }}" alt=""
+                                    class="img-fluid google_play_image"> </a>
+                        </div>
                     </div>
-                    <div class="tab-content">
-                        <article>
-                            <figure>
-                                <img src="{{ asset('front_assets/images/latest-blog-img-home-v1.jpg') }}"
-                                    alt="Latest Blog">
-                                <figcaption>
-                                    <a href="#.">
-                                        <span class="date">05</span>
-                                        <span class="month">Mar</span>
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <div class="post-detail">
-                                <div class="info-bar">
-                                    <div class="comments">
-                                        <a href="#">
-                                            <i class="fa fa-comment"></i> 37
-                                        </a>
-                                    </div>
-                                    <div class="likes">
-                                        <a href="#">
-                                            <i class="fa fa-thumbs-o-up"></i> 110
-                                        </a>
-                                    </div>
-                                    <div class="viewed">
-                                        <a href="#">
-                                            <i class="fa fa-eye"></i> 180
-                                        </a>
-                                    </div>
-                                    <div class="share">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i> Share
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4>DVDS</h4>
-                                <div class="author">
-                                    <a href="#">
-                                        <i class="fa fa-user"></i> Adrey Pachai
-                                    </a>
-                                </div>
-                                <p>Etiam posuere ultrices mauris vitae tincidunt. Cras lacinia, lectus quis ullamcorper
-                                    auctor, mauris lacus imperdiet turpis, et semper enim massa ut diam. Sed at
-                                    malesuada urna. Mauris quis venenatis leo. Proin a malesuada purus. Suspendisse odio
-                                    diam, ornare sit amet interdum ut, vehicula a lorem. Donec a sem erat. Etiam
-                                    condimentum semper mauris vitae porttitor.</p>
-                                <a class="btn btn-dark-gray">Read More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="tab-content">
-                        <article>
-                            <figure>
-                                <img src="{{ asset('front_assets/images/latest-blog-img-home-v1-2.jpg') }}"
-                                    alt="Latest Blog">
-                                <figcaption>
-                                    <a href="#.">
-                                        <span class="date">04</span>
-                                        <span class="month">Mar</span>
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <div class="post-detail">
-                                <div class="info-bar">
-                                    <div class="comments">
-                                        <a href="#">
-                                            <i class="fa fa-comment"></i> 37
-                                        </a>
-                                    </div>
-                                    <div class="likes">
-                                        <a href="#">
-                                            <i class="fa fa-thumbs-o-up"></i> 110
-                                        </a>
-                                    </div>
-                                    <div class="viewed">
-                                        <a href="#">
-                                            <i class="fa fa-eye"></i> 180
-                                        </a>
-                                    </div>
-                                    <div class="share">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i> Share
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4>Magazines</h4>
-                                <div class="author">
-                                    <a href="#">
-                                        <i class="fa fa-user"></i> Adrey Pachai
-                                    </a>
-                                </div>
-                                <p>Sed at malesuada urna. Mauris quis venenatis leo. Proin a malesuada purus.
-                                    Suspendisse odio diam, ornare sit amet interdum ut, vehicula a lorem. Donec a sem
-                                    erat. Etiam condimentum semper mauris vitae porttitor. Etiam posuere ultrices mauris
-                                    vitae tincidunt. Cras lacinia, lectus quis ullamcorper auctor, mauris lacus
-                                    imperdiet turpis, et semper enim massa ut.</p>
-                                <a class="btn btn-dark-gray">Read More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="tab-content">
-                        <article>
-                            <figure>
-                                <img src="{{ asset('front_assets/images/latest-blog-img-home-v1.jpg') }}"
-                                    alt="Latest Blog">
-                                <figcaption>
-                                    <a href="#.">
-                                        <span class="date">03</span>
-                                        <span class="month">Mar</span>
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <div class="post-detail">
-                                <div class="info-bar">
-                                    <div class="comments">
-                                        <a href="#">
-                                            <i class="fa fa-comment"></i> 37
-                                        </a>
-                                    </div>
-                                    <div class="likes">
-                                        <a href="#">
-                                            <i class="fa fa-thumbs-o-up"></i> 110
-                                        </a>
-                                    </div>
-                                    <div class="viewed">
-                                        <a href="#">
-                                            <i class="fa fa-eye"></i> 180
-                                        </a>
-                                    </div>
-                                    <div class="share">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i> Share
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4>Audio</h4>
-                                <div class="author">
-                                    <a href="#">
-                                        <i class="fa fa-user"></i> Adrey Pachai
-                                    </a>
-                                </div>
-                                <p>Etiam posuere ultrices mauris vitae tincidunt. Cras lacinia, lectus quis ullamcorper
-                                    auctor, mauris lacus imperdiet turpis, et semper enim massa ut diam. Sed at
-                                    malesuada urna. Mauris quis venenatis leo. Proin a malesuada purus. Suspendisse odio
-                                    diam, ornare sit amet interdum ut, vehicula a lorem. Donec a sem erat. Etiam
-                                    condimentum semper mauris vitae porttitor.</p>
-                                <a class="btn btn-dark-gray">Read More</a>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="tab-content">
-                        <article>
-                            <figure>
-                                <img src="{{ asset('front_assets/images/latest-blog-img-home-v1-2.jpg') }}"
-                                    alt="Latest Blog">
-                                <figcaption>
-                                    <a href="#.">
-                                        <span class="date">02</span>
-                                        <span class="month">Mar</span>
-                                    </a>
-                                </figcaption>
-                            </figure>
-                            <div class="post-detail">
-                                <div class="info-bar">
-                                    <div class="comments">
-                                        <a href="#">
-                                            <i class="fa fa-comment"></i> 37
-                                        </a>
-                                    </div>
-                                    <div class="likes">
-                                        <a href="#">
-                                            <i class="fa fa-thumbs-o-up"></i> 110
-                                        </a>
-                                    </div>
-                                    <div class="viewed">
-                                        <a href="#">
-                                            <i class="fa fa-eye"></i> 180
-                                        </a>
-                                    </div>
-                                    <div class="share">
-                                        <a href="#">
-                                            <i class="fa fa-share-alt"></i> Share
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4>eAudio</h4>
-                                <div class="author">
-                                    <a href="#">
-                                        <i class="fa fa-user"></i> Adrey Pachai
-                                    </a>
-                                </div>
-                                <p>Sed at malesuada urna. Mauris quis venenatis leo. Proin a malesuada purus.
-                                    Suspendisse odio diam, ornare sit amet interdum ut, vehicula a lorem. Donec a sem
-                                    erat. Etiam condimentum semper mauris vitae porttitor. Etiam posuere ultrices mauris
-                                    vitae tincidunt. Cras lacinia, lectus quis ullamcorper auctor, mauris lacus
-                                    imperdiet turpis, et semper enim massa ut.</p>
-                                <a class="btn btn-dark-gray">Read More</a>
-                            </div>
-                        </article>
-                    </div>
+                </div>
+                <div class=" col-sm-12 col-md-4 main_mobile_image">
+                    <img src="{{ asset('front_new/assets/images/mokup phone tengah (1).png') }}" alt=""
+                        class="img-fluid mobile_image" style="height: 370px;">
                 </div>
             </div>
         </div>
     </section>
-    <!-- End: Latest Blog -->
+    <!-- end -->
 
 
-    <!-- Start: Social Network -->
-    <section class="social-network section-padding">
-        <div class="container">
-            <div class="center-content">
-                <h2 class="section-title">Follow Us</h2>
-                <span class="underline center"></span>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <ul>
-                <li>
-                    <a class="facebook" href="https://m.facebook.com/darulemaanotaqwaof?wtsid=rdr_02DpNTiScv6K9PNYQ"
-                        target="_blank">
-                        <span>
-                            <i class="fa fa-facebook-f"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="twitter" href="https://x.com/emaanotaqwaoff?t=_weFiq_nXPYU2AJQfUP8Yw&s=09" target="_blank">
-                        <span>
-                            <i class="fa fa-twitter"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="insta"
-                        href="https://www.instagram.com/darul_eman_o_taqwa?utm_source=qr&igsh=MXQzbGw0c2VoYmY1aw=="
-                        target="_blank">
-                        <span>
-                            <i class="fa fa-instagram"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="google" href="#" target="_blank">
-                        <span>
-                            <i class="fa fa-google-plus"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="linkedin" href="#" target="_blank">
-                        <span>
-                            <i class="fa fa-linkedin"></i>
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="youtube" href="https://youtube.com/@darulemaanotaqwa?si=4PxImuQ81S2JdOnL" target="_blank">
-                        <span>
-                            <i class="fa fa-youtube"></i>
-                        </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
     <!-- End: Social Network -->
 @endsection
 @section('js')

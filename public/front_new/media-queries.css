@@ -1,0 +1,271 @@
+
+/* Media queries for max-width: 815px */
+@media only screen and (max-width: 815px) {
+  .hero_mosque_icon {
+    margin-left: -2px;
+  }
+}
+
+/* Media queries for max-width: 576px */
+@media only screen and (max-width: 576px) {
+  /* Logo adjustments */
+  .logo img {
+    width: 90px !important;
+    margin-top: 13px;
+  }
+
+  /* Navbar link adjustments */
+  .nav-link.active {
+    margin: 0px !important;
+  }
+
+  /* Hero section adjustments */
+  .main_hero {
+    width: 100% !important;
+  }
+  .search_bar {
+    width: 100% !important;
+  }
+  .hero_heading h2 {
+    margin: 0px;
+    padding: 0px;
+  }
+  .hero_top_contents {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image img {
+    width: 60%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    right: 10px;
+    height: 105px !important;
+  }
+
+  .hero-mosque {
+    margin: 0px !important;
+    position: relative;
+    width: 160px !important;
+  }
+
+  /* Hadith section adjustments */
+  .hadith_paragraph {
+    width: 100%;
+  }
+
+  .hadith_br {
+    display: none;
+    text-align: justify !important;
+  }
+  .hadith_card {
+    width: 100%;
+  }
+  /* Prophet message adjustments */
+  .message_container {
+    width: 100%;
+    height: auto;
+  }
+  /* Subjective card adjustments */
+  .subjective_card img {
+    display: block; /* Make the image a block element */
+    right: 8px; /* Align the image to the right */
+    max-width: 80%; /* Optional: Limit the image width to 80% */
+  }
+
+  .hadith_headings h3 {
+    font-size: 33px;
+  }
+
+  /* App marketing adjustments */
+  .custom_marketing_container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .app_paltform img {
+    width: 100px;
+  }
+  .marketing_br {
+    display: none;
+  }
+  .marketing_heading h3 {
+    font-size: 19px;
+    margin-top: 0px;
+  }
+
+  /* Footer adjustments */
+  .camel-image,
+  .popular-small-tree,
+  .popular-large-tree {
+    display: none;
+  }
+  .footer-content img {
+    display: none;
+  }
+  .footer-content h5 {
+    max-width: 270px;
+  }
+  .footer-content p {
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .custom-indicators {
+    margin-top: -10px;
+  }
+  .message_container {
+    height: auto !important;
+  }
+
+  .hero-image img {
+    margin-right: 68px;
+  }
+  .prophet_message {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* app marketing adjustment for tablets screen */
+  .custom_marketing_container {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+  .app_paltform {
+    display: flex;
+    justify-content: center;
+  }
+  .main_mobile_image {
+    display: flex;
+    justify-content: center;
+  }
+  .mobile_image {
+    margin: 0px !important;
+  }
+  .hadith_card {
+    width: 100%;
+  }
+  .hadith_card img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 80%; /* Optional: Limit the image width to 80% */
+  }
+  .hero-mobile-image {
+    width: 40% !important;
+    height: 150px !important;
+    /* margin-left: 50px; */
+  }
+  .hero-mosque {
+    width: 50%;
+  }
+  .carousel-item .hero-para{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: justify;
+    letter-spacing: 0px;
+    line-height: normal;
+    font-size: 19px
+
+  }
+  .hero-indicators button{
+    margin-top: 10px !important;
+  }
+  .download_app_vector_image{
+    width: 100%;
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width:992px) {
+  .hero_top_contents {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image {
+    display: flex;
+    justify-content: center;
+  }
+  .prophet_message {
+    width: 80%;
+    margin: 0px !important;
+    padding: 0px;
+  }
+  .hero_small_tree,
+  .hero_large_tree {
+    display: none;
+  }
+  .footer-content h5{
+    width: 60%;
+   font-size: 10px;
+    color: red;
+    text-align: justify;
+    margin-left: 400px;
+  }
+  .footer-content p {
+    width: 50%;
+
+  }
+  
+
+}
+
+@media only screen and (max-width: 414px) {
+  .hadith_card img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 80%; /* Optional: Limit the image width to 80% */
+  }
+ 
+
+}
+@media only screen and (max-width: 430px) {
+  .hadith_card img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 80%; /* Optional: Limit the image width to 80% */
+  }
+  .carousel-indicators{
+    margin-bottom: 0px !important;
+  }
+  .hero-image img {
+    right: 43px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Footer adjustments for large screen */
+  .camel-image,
+  .popular-small-tree,
+  .popular-large-tree {
+    display: none;
+  }
+  .footer-content img {
+    display: none;
+  }
+  .prophet_message {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .hero-mobile-image {
+    width: 60% !important;
+    height: 150px !important;
+    /* margin-left: 50px; */
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer-content h5 {
+    max-width: 300px;
+  }
+  .footer-content p {
+    max-width: 300px;
+  }
+} 

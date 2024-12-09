@@ -2,29 +2,18 @@
 <html lang="en">
 
 <head>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1">
-
-    <!-- Title -->
-    <title>{{ $settings['app_name'] ?? 'Al Mukhtar' }} | @yield('title', '')</title>
-
-    <!-- Favicon -->
-    <link href="{{ asset('front_assets/images/favicon.ico') }}" rel="icon" type="image/x-icon">
-
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i"
-        rel="stylesheet">
-    <link href="{{ asset('front_assets/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-
-    <!-- Mobile Menu -->
-    <link href="{{ asset('front_assets/css/mmenu.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('front_assets/css/mmenu.positioning.css') }}" rel="stylesheet" type="text/css">
-
-    <!-- Stylesheet -->
-    <link href="{{ asset('front_assets/css/style.css') }}" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Almukhtar_site</title>
+    <!-- custom css file -->
+    <link rel="stylesheet" href="{{ asset('front_new/style.css') }}">
+    <!-- custom bootstrap file -->
+    <link rel="stylesheet" href="{{ asset('front_new/assets/bootstrap-5.3.3-dist/css/bootstrap.min.css') }}">
+    <!-- custom font awesome file -->
+    <link rel="stylesheet" href="{{ asset('front_new/assets/assets/fontawesome-free-6.6.0-web/css/all.min.css') }}">
+    <!-- media queries css link -->
+    <link rel="stylesheet" href="{{ asset('front_new/media-queries.css') }}">
 </head>
 
 <body>
- 

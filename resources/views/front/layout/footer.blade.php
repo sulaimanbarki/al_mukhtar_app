@@ -1,108 +1,112 @@
-<footer class="site-footer">
+<section class="footer_section py-5 footer-background-image">
     <div class="container">
-        <div id="footer-widgets">
-            <div class="row">
-                <div class="col-md-4 col-sm-6 widget-container">
-                    <div id="text-2" class="widget widget_text">
-                        <h3 class="footer-widget-title">About Libraria</h3>
-                        <span class="underline left"></span>
-                        <div class="textwidget">
-                            It is a long established fact that a reader will be distracted by the readable content
-                            of a page when looking.
-                        </div>
-                        <address>
-                            <div class="info">
-                                <i class="fa fa-location-arrow"></i>
-                                <span>21 King Street, Melbourne, Victoria 3000 Australia</span>
-                            </div>
-                            <div class="info">
-                                <i class="fa fa-envelope"></i>
-                                <span><a href="mailto:support@libraria.com">support@libraria.com</a></span>
-                            </div>
-                            <div class="info">
-                                <i class="fa fa-phone"></i>
-                                <span><a href="tel:012-345-6789">+ 012-345-6789</a></span>
-                            </div>
-                        </address>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-6 widget-container">
-                    <div id="nav_menu-2" class="widget widget_nav_menu">
-                        <h3 class="footer-widget-title">Quick Links</h3>
-                        <span class="underline left"></span>
-                        <div class="menu-quick-links-container">
-                            <ul id="menu-quick-links" class="menu">
-                                <li><a href="#">Library News</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Meet Our Staff</a></li>
-                                <li><a href="#">Board of Trustees</a></li>
-                                <li><a href="#">Budget</a></li>
-                                <li><a href="#">Annual Report</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix hidden-lg hidden-md hidden-xs tablet-margin-bottom"></div>
-                <div class="col-md-2 col-sm-6 widget-container">
-                    <div id="text-4" class="widget widget_text">
-                        <h3 class="footer-widget-title">Timing</h3>
-                        <span class="underline left"></span>
-                        <div class="timming-text-widget">
-                            <time datetime="2017-02-13">Mon - Thu: 9 am - 9 pm</time>
-                            <time datetime="2017-02-13">Fri: 9 am - 6 pm</time>
-                            <time datetime="2017-02-13">Sat: 9 am - 5 pm</time>
-                            <time datetime="2017-02-13">Sun: 1 pm - 6 pm</time>
-                            <ul>
-                                <li><a href="#">Closings</a></li>
-                                <li><a href="#">Branches</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 widget-container">
-                    <div class="widget twitter-widget">
-                        <h3 class="footer-widget-title">Latest Tweets</h3>
-                        <span class="underline left"></span>
-                        <div id="twitter-feed">
-                            <ul>
-                                <li>
-                                    <p><a href="#">@TemplateLibraria</a> Sed ut perspiciatis unde omnis iste
-                                        natus error sit voluptatem. <a href="#">template-libraria.com</a>
-                                    </p>
-                                </li>
-                                <li>
-                                    <p><a href="#">@TemplateLibraria</a> Sed ut perspiciatis unde omnis iste
-                                        natus error sit voluptatem. <a href="#">template-libraria.com</a>
-                                    </p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="sub-footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-text col-md-3">
-                    <p> <a href="{{ route('front.home') }}"><img src="{{ $logo_path->logo_path }}" width="45%"
-                                alt="" /></a>
+        <div class="row">
+            <!-- First Column -->
+            {{-- <div class="col-sm-12 col-md-4  "> --}}
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4  small-tree">
+
+                <img src="{{ asset('front_new/assets/images/logo.svg') }}" alt="Logo"
+                    class="footer_logo img-fluid mb-3">
+                <div class="footer-content">
+                    <h5>Read, Learn and Know Hadith</h5>
+                    <p>
+                        Our aim and objective is to make pure hadith from the best sources available to all. We have
+                        created this
+                        website with the utmost importance so that anyone can easily learn and teach Hadith. We seek
+                        your
+                        undivided support in expanding the scope of our entire project including this website. We
+                        have a
+                        mobile
+                        app so that you can easily read hadith anywhere.
                     </p>
+                    <img src="{{ asset('front_new/assets/images/small-tree.svg') }}" alt="SmallTree" class="img-fluid">
                 </div>
-                <div class="col-md-9 pull-right">
-                    <ul>
-                        <li><a href="{{ route('front.home') }}">Home</a></li>
-                        <li><a href="#">Books &amp; Media</a></li>
-                        <li><a href="#">News &amp; Events</a></li>
-                        {{-- <li><a href="#">Kids &amp; Teens</a></li> --}}
-                        {{-- <li><a href="#">Services</a></li> --}}
-                        <li><a href="#">Research</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="{{ route('front.contact.us') }}">Contact</a></li>
-                    </ul>
+            </div>
+
+            <!-- Second Column -->
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2  ">
+                <div class="navigate_contents">
+                    <h5>Navigate</h5>
+                    <a href="#" class="text-decoration-none">
+                        <p>Hadith Books</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Subjective</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Hadith</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Privacy policy</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Support</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Third Column -->
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2  ">
+                <div class="sub_contents">
+                    <h5>About Us</h5>
+                    <a href="#" class="text-decoration-none">
+                        <p>Our project</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Tahqik</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>The writer</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Facebook</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Fourth Column -->
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2  ">
+                <div class="ourproject_contents">
+                    <h5>Our Projects</h5>
+                    <a href="#" class="text-decoration-none">
+                        <p>Al Hadith</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Quran Majeed</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Dua and Ruqiyah</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>IRD Foundation</p>
+                    </a>
+                </div>
+                <img src="{{ asset('front_new/assets/images/camel_image.svg ') }}" alt="Camel Image"
+                    class="img-fluid camel-image">
+            </div>
+
+            <!-- Fifth Column -->
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2  ">
+                <div class="ourproject_contents">
+                    <h5>Popular Sites</h5>
+                    <a href="#" class="text-decoration-none">
+                        <p>Quran.com</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Sunnah.com</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Islamhouse.com</p>
+                    </a>
+                    <a href="#" class="text-decoration-none">
+                        <p>Respons-Anti_islam</p>
+                    </a>
+                    <img src="{{ asset('front_new/assets/images/small-tree.svg') }}" alt="Small Tree"
+                        class="img-fluid popular-small-tree">
+                    <img src="{{ asset('front_new/assets/images/large-tree.svg') }}" alt="Large Tree"
+                        class="img-fluid popular-large-tree">
                 </div>
             </div>
         </div>
     </div>
-</footer>
+</section>

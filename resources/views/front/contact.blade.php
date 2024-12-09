@@ -214,61 +214,52 @@
     <!-- End: Contact Us Section -->
 
     <!-- Start: Social Network -->
-    <section class="social-network section-padding">
+    <section class="social-network py-5">
         <div class="container">
-            <div class="center-content">
+            <div class="text-center mb-4">
                 <h2 class="section-title">Follow Us</h2>
-                <span class="underline center"></span>
+                <span class="d-block mx-auto my-2" style="width: 50px; height: 3px; background-color: #000;"></span>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <ul>
+            <ul class="list-unstyled d-flex justify-content-center gap-3">
                 <li>
-                    <a class="facebook" href="https://m.facebook.com/darulemaanotaqwaof?wtsid=rdr_02DpNTiScv6K9PNYQ"
-                        target="_blank">
-                        <span>
-                            <i class="fa fa-facebook-f"></i>
-                        </span>
+                    <a class="text-primary" href="https://m.facebook.com/darulemaanotaqwaof?wtsid=rdr_02DpNTiScv6K9PNYQ"
+                        target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f fs-3"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="twitter" href="https://x.com/emaanotaqwaoff?t=_weFiq_nXPYU2AJQfUP8Yw&s=09" target="_blank">
-                        <span>
-                            <i class="fa fa-twitter"></i>
-                        </span>
+                    <a class="text-primary" href="https://x.com/emaanotaqwaoff?t=_weFiq_nXPYU2AJQfUP8Yw&s=09"
+                        target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter fs-3"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="insta"
+                    <a class="text-primary"
                         href="https://www.instagram.com/darul_eman_o_taqwa?utm_source=qr&igsh=MXQzbGw0c2VoYmY1aw=="
-                        target="_blank">
-                        <span>
-                            <i class="fa fa-instagram"></i>
-                        </span>
+                        target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram fs-3"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="google" href="#" target="_blank">
-                        <span>
-                            <i class="fa fa-google-plus"></i>
-                        </span>
+                    <a class="text-primary" href="#" target="_blank" aria-label="Google Plus">
+                        <i class="fab fa-google-plus-g fs-3"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="linkedin" href="#" target="_blank">
-                        <span>
-                            <i class="fa fa-linkedin"></i>
-                        </span>
+                    <a class="text-primary" href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in fs-3"></i>
                     </a>
                 </li>
                 <li>
-                    <a class="youtube" href="https://youtube.com/@darulemaanotaqwa?si=4PxImuQ81S2JdOnL" target="_blank">
-                        <span>
-                            <i class="fa fa-youtube"></i>
-                        </span>
+                    <a class="text-primary" href="https://youtube.com/@darulemaanotaqwa?si=4PxImuQ81S2JdOnL"
+                        target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube fs-3"></i>
                     </a>
                 </li>
             </ul>
         </div>
     </section>
+
     <!-- End: Social Network -->
 @endsection
