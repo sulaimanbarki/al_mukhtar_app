@@ -23,6 +23,7 @@ jobs:
         server-dir: /  # Updated path
         state-name: .ftp-deploy-sync-state.json 
         exclude: |
+            public/adminlte/**
             **/vendor/**
             **/node_modules/**
             .env
