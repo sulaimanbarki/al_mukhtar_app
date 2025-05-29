@@ -32,7 +32,7 @@ class PagesController extends Controller
     {
         $books = Book::take(10)->orderBy('id', 'desc')->get();
         $multimedia = Multimedia::take(10)->orderBy('id', 'desc')->get();
-        // dd($books);
+
         return view('front.index', compact('books'));
     }
     public function all_books()
@@ -67,6 +67,7 @@ class PagesController extends Controller
         $data = Book::where('slug', $slug)->first();
         return view('front.books-media-detail', compact('data'));
     }
+    
     public function blog()
     {
         return view('front.blog');

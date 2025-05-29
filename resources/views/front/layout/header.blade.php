@@ -9,17 +9,23 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active ms-3" aria-current="page" href="{{ route('front.home') }}">
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="{{ route('front.home') }}">
                         <i class="fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('front.all_books') }}">Go to Hadith</a>
+                    <a class="nav-link {{ Request::is('all/books*') ? 'active' : '' }}" href="/all/books">Books</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hadith Books</a>
+                    <a class="nav-link" href="{{ route('front.blog') }}">Audios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('front.blog') }}">Blog</a>
+                    <a class="nav-link" href="{{ route('front.blog') }}">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('front.blog') }}">Announcements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('front.contact.us') }}">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('front.contact.us') }}">Contact</a>

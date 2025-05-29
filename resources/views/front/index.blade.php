@@ -10,47 +10,21 @@
                         <h2 class="text-white">Find Your Favorite <br> hadith</h2>
                     </div>
                     <div class="input-group mb-3 search_bar">
-                        <input type="text" class="form-control p-2 border" placeholder="write here..."
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <input type="text" class="form-control p-2 border" id="hadithSearchInput"
+                            placeholder="write here...">
                         <span class="input-group-text">
                             <i class="fa-solid fa-sliders"></i>
                         </span>
-                        <button class="btn btn-secondary hero_search_btn" type="button" id="button-addon2">
-                            <i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                        <button class="btn btn-secondary hero_search_btn" type="button" id="hadithSearchBtn">
+                            <i class="fa-solid fa-magnifying-glass"></i> Search
+                        </button>
                     </div>
                     <div class="hero_paragraph">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
-                            data-bs-interval="3000">
-                            <div class="carousel-indicators hero-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <p class="hero-para">He said, the Messenger of Allah (PBUH) said: When a Muslim performs
-                                        ablution properly, faces Allah with concentration and prays two rak'ahs, Paradise is
-                                        guaranteed for him.</p>
-                                    <p class="hero-para">Sahih Fazayel Amal: 87</p>
-                                </div>
-                                <div class="carousel-item">
-                                    <p class="hero-para">He said, the Messenger of Allah (PBUH) said: When a Muslim performs
-                                        ablution properly, faces Allah with concentration and prays two rak'ahs, Paradise is
-                                        guaranteed for him.</p>
-                                    <p class="hero-para">Sahih Fazayel Amal: 87</p>
-                                </div>
-                                <div class="carousel-item">
-                                    <p class="hero-para">He said, the Messenger of Allah (PBUH) said: When a Muslim performs
-                                        ablution properly, faces Allah with concentration and prays two rak'ahs, Paradise is
-                                        guaranteed for him.</p>
-                                    <p class="hero-para">Sahih Fazayel Amal: 87</p>
-                                </div>
-                            </div>
+                        <div id="hadithResult" class="p-3 bg-light rounded shadow-sm">
+                            <p class="hero-para">Search to see a hadith here...</p>
                         </div>
                     </div>
+
                 </div>
                 <div class="col-md-6 sub-hero-bg-image">
                     <div class="hero_top_contents">
@@ -96,79 +70,7 @@
                         </a>
                     </div>
                 @endforeach
-
-                {{-- <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card-2.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card-3.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card-4.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div> --}}
             </div>
-
-            {{-- <div class="row mt-1 hadith_second_row">
-                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card_5.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card_6.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card_7.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card  hadith_card">
-                            <img class="card-img-top" src="./assets/images/card_8.png" alt="Card image cap">
-                            <h5 class="text-center">Sahih Bukhari</h5>
-                            <p class="text-center">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-            </div> --}}
-        </div>
     </section>
 
     <!-- prophet message section -->
@@ -178,31 +80,22 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
                         data-bs-interval="3000">
-                        <div class="carousel-indicators custom-indicators">
+                        {{-- <div class="carousel-indicators custom-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                                 class="active" aria-current="true" aria-label="Slide 1"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                                 aria-label="Slide 2"></button>
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                                 aria-label="Slide 3"></button>
+                        </div> --}}
+
+                        <div class="mt-4 text-white" id="randomHadithContainer">
+                            <h5 id="topicHeading">موضوع: انتظار کریں...</h5>
+                            <p id="hadithText">انتظار کریں...</p>
+                            <small id="hadithReference"></small>
                         </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <p>The Prophet (peace and blessings of Allah be upon him) said, “The best of you is the one
-                                    who is the best in character” (Bukhari, Muslim, Mishkat Ha/5075).</p>
-                                <p>Sahih Fazayel Amal: 87</p>
-                            </div>
-                            <div class="carousel-item">
-                                <p>The Prophet (peace and blessings of Allah be upon him) said, “The best of you is the one
-                                    who is the best in character” (Bukhari, Muslim, Mishkat Ha/5075).</p>
-                                <p>Sahih Fazayel Amal: 87</p>
-                            </div>
-                            <div class="carousel-item">
-                                <p>The Prophet (peace and blessings of Allah be upon him) said, “The best of you is the one
-                                    who is the best in character” (Bukhari, Muslim, Mishkat Ha/5075).</p>
-                                <p>Sahih Fazayel Amal: 87</p>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>
@@ -227,96 +120,6 @@
 
 
             <div class="row d-flex justify-content-center">
-                {{-- <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#3498db" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">১</text>
-                            </svg>
-                            <img class="card-img-top img-fluid" src="./assets/images/عقيدة.png">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">২</text>
-                            </svg>
-                            <img class="card-img-top img-fluid" src="./assets/images/إيمان.png">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">৩</text>
-                            </svg>
-                            <img class="card-img-top img-fluid" src="./assets/images/حرمة.png">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">৪</text>
-                            </svg>
-                            <img class="card-img-top img-fluid" src="./assets/images/قصص الحديث.png">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">৫</text>
-                            </svg>
-                            <img class="card-img-top img-fluid" src="./assets/images/الصلاة.png">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div>
-                <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">৬</text>
-                            </svg>
-                            <img class="card-img-top img-fluid" src="./assets/images/التبرع صدقة.png">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div> --}}
                 @foreach ($books as $data)
                     <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
                         <a href="{{ route('book-details', $data->slug) }}" class="text-decoration-none">
@@ -335,22 +138,6 @@
                         </a>
                     </div>
                 @endforeach
-                {{-- <div class=" col-sm-12 col-md-6 col-lg-3 mt-3">
-                    <a href="" class="text-decoration-none">
-                        <div class="card w-100 subjective_card">
-                            <svg width="40" height="40" viewBox="0 0 100 100"
-                                style="margin-left: 10px; margin-top:5px">
-                                <polygon points="50,10 90,40 70,90 30,90 10,40" fill="#DDDDDD" />
-                                <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="40"
-                                    font-family="Arial" dy=".5em">৮</text>
-                            </svg>
-                            <img class="card-img-top img-fluid"
-                                src="{{ asset('front_new/assets/images/الأفعال والفضائل.png') }}">
-                            <h5 class="mt-5 ms-3">Sahih Bukhari</h5>
-                            <p class="ms-3">Hadith Range 7563</p>
-                        </div>
-                    </a>
-                </div> --}}
 
                 <a href="{{ route('front.all_books') }}" class="btn btn-outline  text-decoration-none hadith_btn mt-4">
                     <i class="fa-brands fa-slack me-1 al_hadith_icons_before"></i> View All categories<i
@@ -394,6 +181,91 @@
 
     <!-- End: Social Network -->
 @endsection
+
 @section('js')
-    <script></script>
+    <script>
+        const apiKey = '$2y$10$yRd9ITzqmMvtNh58MGxP824uSdG1tD3dRUWSq3va8DtxVsBPe';
+        const hadithTextElement = document.getElementById('hadithText');
+        const hadithReferenceElement = document.getElementById('hadithReference');
+        const topicHeadingElement = document.getElementById('topicHeading');
+
+        async function fetchRandomHadith() {
+            try {
+                const randomPage = Math.floor(Math.random() * 1619) + 1;
+                const url = `https://hadithapi.com/api/hadiths?apiKey=${apiKey}&page=${randomPage}`;
+                const response = await fetch(url);
+                const json = await response.json();
+                const hadiths = json?.hadiths?.data || [];
+
+                if (hadiths.length > 0) {
+                    const randomIndex = Math.floor(Math.random() * hadiths.length);
+                    const hadith = hadiths[randomIndex];
+
+                    hadithTextElement.innerText = hadith.hadithUrdu || 'کوئی حدیث اردو میں نہیں ملی';
+                    hadithReferenceElement.innerText =
+                        `${hadith.book?.bookName || ''} – ${hadith.chapter?.chapterUrdu || ''}`;
+                    topicHeadingElement.innerText = `موضوع: ${hadith.chapter?.chapterUrdu || 'نامعلوم'}`;
+                } else {
+                    hadithTextElement.innerText = 'کوئی حدیث دستیاب نہیں ہے';
+                    hadithReferenceElement.innerText = '';
+                    topicHeadingElement.innerText = 'موضوع: دستیاب نہیں';
+                }
+            } catch (error) {
+                hadithTextElement.innerText = 'خرابی ہوگئی، دوبارہ کوشش کریں';
+                topicHeadingElement.innerText = 'موضوع: خرابی';
+                console.error('API Error:', error);
+            }
+        }
+
+        fetchRandomHadith();
+        setInterval(fetchRandomHadith, 30000);
+    </script>
+    <script>
+        const searchBtn = document.getElementById("hadithSearchBtn");
+        const searchInput = document.getElementById("hadithSearchInput");
+        const hadithResult = document.getElementById("hadithResult");
+
+        async function searchHadith(query) {
+            if (!query.trim()) return;
+
+            hadithResult.innerHTML = `<p class="hero-para">Loading...</p>`;
+
+            try {
+                const response = await fetch(
+                    `https://hadithapi.com/api/hadiths?apiKey=${apiKey}&hadithUrdu=${encodeURIComponent(query)}`);
+                const json = await response.json();
+                const hadiths = json?.hadiths?.data;
+
+                if (!hadiths || hadiths.length === 0) {
+                    hadithResult.innerHTML =
+                        `<p class="hero-para text-danger">کوئی حدیث نہیں ملی۔ دوبارہ کوشش کریں۔</p>`;
+                    return;
+                }
+
+                // Pick a random hadith from the list
+                const randomIndex = Math.floor(Math.random() * hadiths.length);
+                const hadith = hadiths[randomIndex];
+
+                hadithResult.innerHTML = `
+                <p class="hero-para">${hadith.hadithUrdu}</p>
+                <p class="hero-para"><strong>${hadith.book?.bookName || ''}</strong>: ${hadith.hadithNumber}</p>
+            `;
+            } catch (err) {
+                hadithResult.innerHTML =
+                    `<p class="hero-para text-danger">کچھ غلط ہو گیا۔ براہ کرم بعد میں کوشش کریں۔</p>`;
+                console.error(err);
+            }
+        }
+
+        searchBtn.addEventListener("click", () => {
+            const query = searchInput.value;
+            searchHadith(query);
+        });
+
+        searchInput.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                searchBtn.click();
+            }
+        });
+    </script>
 @endsection
