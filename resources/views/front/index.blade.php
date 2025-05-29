@@ -7,11 +7,11 @@
             <div class="row hero_vector_image">
                 <div class=" col-sm-12 col-md-12 col-lg-6 kalma_image">
                     <div class="hero_heading">
-                        <h2 class="text-white">Find Your Favorite <br> hadith</h2>
+                        <h2 class="text-white">Find Your Favorite <br> hadith </h2>
                     </div>
                     <div class="input-group mb-3 search_bar">
                         <input type="text" class="form-control p-2 border" id="hadithSearchInput"
-                            placeholder="write here...">
+                            placeholder="برائے مہربانی اردو زبان میں تلاش کریں۔">
                         <span class="input-group-text">
                             <i class="fa-solid fa-sliders"></i>
                         </span>
