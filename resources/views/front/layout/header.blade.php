@@ -16,10 +16,10 @@
                     <a class="nav-link {{ Request::is('all/books*') ? 'active' : '' }}" href="/all/books">Books</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('front.blog') }}">Audios</a>
+                    <a class="nav-link  {{ Request::is('audio-lectures*') ? 'active' : '' }}" href="{{ route('front.audio-lectures') }}">Audios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('front.blog') }}">Videos</a>
+                    <a class="nav-link  {{ Request::is('videos-bayanaat*') ? 'active' : '' }}" href="{{ route('front.video-bayanaat') }}">Videos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('front.blog') }}">Announcements</a>
@@ -33,9 +33,7 @@
 
             </ul>
             <div class="nav_buttons">
-                <i class="fa-solid fa-moon  nav_moon_icon"></i>
-                <button class="btn btn-outline nav_btn " type="submit">Support <i
-                        class="fa-solid fa-hand-holding-heart text-white nav_button_hand"></i></button>
+                <button class="btn btn-outline nav_btn " type="submit">Support </button>
             </div>
         </div>
     </div>

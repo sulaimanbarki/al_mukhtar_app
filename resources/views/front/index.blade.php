@@ -46,8 +46,7 @@
     <section class="book0f_hadith  py-5">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <a href="{{ route('front.all_books') }}" class="btn btn-outline  text-decoration-none hadith_btn"> <i
-                        class="fa-brands fa-slack me-1 al_hadith_icons_before"></i> All Hadith books <i
+                <a href="{{ route('front.all_books') }}" class="btn btn-outline  text-decoration-none hadith_btn"></i> All books <i
                         class="fa-solid fa-arrow-right al_hadith_icons ms-2" style="width: 20px;"></i></a>
                 <div class="hadith_headings mt-5">
                     <h3 class="text-center">Books of <span class="hadith_sub_heading"> Hadis</span></h3>

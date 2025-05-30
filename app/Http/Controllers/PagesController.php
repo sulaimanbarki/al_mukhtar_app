@@ -64,7 +64,7 @@ class PagesController extends Controller
 
     public function bookDetails($slug)
     {
-        $data = Book::where('slug', $slug)->first();
+        $data = Book::where('slug', $slug)->firstOrFail();
         return view('front.books-media-detail', compact('data'));
     }
     
@@ -72,10 +72,17 @@ class PagesController extends Controller
     {
         return view('front.blog');
     }
-    public function video_audio()
+    
+    public function audios()
+    {
+        $audios = Multimedia::where('type', 'audio')->get();
+        return view('front.audios', compact('audios'));
+    }
+
+    public function videos()
     {
         $videos = Multimedia::where('type', 'video')->get();
         $audios = Multimedia::where('type', 'audio')->get();
-        return view('front.video_audio', compact('videos', 'audios'));
+        return view('front.videos', compact('videos', 'audios'));
     }
 }
