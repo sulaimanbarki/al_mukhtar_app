@@ -16,8 +16,9 @@ class PagesController extends Controller
 {
     public function dashboard()
     {
-
-        return view('admin.index');
+        $total_books = Book::count();
+        $total_media = Multimedia::count();
+        return view('admin.index', compact('total_books', 'total_media'));
     }
 
     public function home()

@@ -18,9 +18,9 @@
                 <!-- small box -->
                 <div class="small-box bg-info">
                     <div class="inner">
-                        {{-- <h3>{{ $total_records }}</h3> --}}
+                        <h3>{{ $total_books }}</h3>
 
-                        <p>Total Records</p>
+                        <p>Total Books</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
@@ -33,9 +33,9 @@
                 <!-- small box -->
                 <div class="small-box bg-success">
                     <div class="inner">
-                        {{-- <h3>{{ $total_certificates }}</h3> --}}
+                        <h3>{{ $total_media }}</h3>
 
-                        <p>Total Certificates</p>
+                        <p>Total Multimedia</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
